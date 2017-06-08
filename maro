@@ -1,0 +1,2530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <title>Mechanical Color Pie 2017 | MAGIC: THE GATHERING</title>
+
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1"/>
+  <meta name="format-detection" content="telephone=no"/>
+	<meta name="google-site-verification" content="WquIfqfWtlm2X62GTeJ-5vDtRrbOVOIT6mFc3vAP5BQ" />
+
+  <link rel="icon" type="image/png" href="/sites/all/themes/wiz_mtg/icons/touch-icon-144.png"/>
+  <link rel="shortcut icon" type="image/x-icon" href="/sites/all/themes/wiz_mtg/icons/favicon.ico"/>
+  <link rel="apple-touch-icon-precomposed" href="/sites/all/themes/wiz_mtg/icons/touch-icon-57.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/sites/all/themes/wiz_mtg/icons/touch-icon-72.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/sites/all/themes/wiz_mtg/touch-icon-114.png"/>
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/sites/all/themes/wiz_mtg/icons/touch-icon-144.png"/>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="http://magic.wizards.com/sites/all/themes/wiz_mtg/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="description" content="Mark lays out all the details of where each ability falls within the color pie as of 2017." />
+<meta name="generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="canonical" href="http://magic.wizards.com/en/articles/archive/making-magic/mechanical-color-pie-2017-2017-06-05" />
+<link rel="shortlink" href="http://magic.wizards.com/en/node/1160871" />
+<meta property="og:site_name" content="MAGIC: THE GATHERING" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://magic.wizards.com/en/articles/archive/making-magic/mechanical-color-pie-2017-2017-06-05" />
+<meta property="og:title" content="Mechanical Color Pie 2017" />
+<meta property="og:description" content="Mark lays out all the details of where each ability falls within the color pie as of 2017." />
+<meta property="og:image" content="http://magic.wizards.com/sites/mtg/files/images/hero/MM20170605_icon.jpg" />
+  <style type="text/css" media="all">
+@import url("http://magic.wizards.com/modules/system/system.base.css?oqvyyu");
+@import url("http://magic.wizards.com/modules/system/system.menus.css?oqvyyu");
+@import url("http://magic.wizards.com/modules/system/system.messages.css?oqvyyu");
+@import url("http://magic.wizards.com/modules/system/system.theme.css?oqvyyu");
+</style>
+<style type="text/css" media="all">
+@import url("http://magic.wizards.com/sites/all/modules/contrib/jquery_update/replace/ui/themes/base/minified/jquery.ui.core.min.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/modules/contrib/jquery_update/replace/ui/themes/base/minified/jquery.ui.theme.min.css?oqvyyu");
+</style>
+<style type="text/css" media="all">
+@import url("http://magic.wizards.com/sites/all/modules/contrib/calendar/css/calendar_multiday.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/modules/contrib/date/date_api/date.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/modules/contrib/date/date_popup/themes/datepicker.1.7.css?oqvyyu");
+@import url("http://magic.wizards.com/modules/field/theme/field.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/modules/contrib/mollom/mollom.css?oqvyyu");
+@import url("http://magic.wizards.com/modules/node/node.css?oqvyyu");
+@import url("http://magic.wizards.com/modules/user/user.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/modules/features/wiz_views_events_calendar/css/idangerous.swiper.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/modules/features/wiz_views_events_calendar/css/idangerous.swiper.scrollbar.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/modules/contrib/views/css/views.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/modules/contrib/ckeditor/css/ckeditor.css?oqvyyu");
+</style>
+<style type="text/css" media="all">
+@import url("http://magic.wizards.com/sites/all/modules/contrib/ctools/css/ctools.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/modules/contrib/ctools/css/modal.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/modules/contrib/modal_forms/css/modal_forms_popup.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/modules/contrib/panels/css/panels.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/modules/custom/wiz_npsu/css/npsu.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/modules/custom/wiz_npsu_mtg/css/npsu_mtg.css?oqvyyu");
+</style>
+<style type="text/css" media="all">
+@import url("http://magic.wizards.com/sites/all/themes/wiz_mtg/css/jquery.fancybox.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/themes/wiz_mtg/css/jquery-ui-mod.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/themes/wiz_mtg/css/owl.carousel.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/themes/wiz_mtg/css/scrollbars.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/themes/wiz_mtg/css/fonts.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/themes/wiz_mtg/css/core.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/themes/wiz_mtg/css/header.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/themes/wiz_mtg/css/footer.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/themes/wiz_mtg/css/page-header.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/themes/wiz_mtg/css/medias.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/themes/wiz_mtg/css/search.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/themes/wiz_mtg/css/decklist.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/themes/wiz_mtg/css/articles.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/themes/wiz_mtg/css/game-info.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/themes/wiz_mtg/css/events.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/themes/wiz_mtg/css/community.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/themes/wiz_mtg/css/mx.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/themes/wiz_mtg/css/sections/immersive.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/themes/wiz_mtg/css/sections/interstitials.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/themes/wiz_mtg/css/styles-extended.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/themes/wiz_mtg/css/legacy.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/themes/wiz_mtg/css/legacyStyles.css?oqvyyu");
+@import url("http://magic.wizards.com/sites/all/themes/wiz_mtg/css/geo-blocker.css?oqvyyu");
+</style>
+<link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic" media="all" />
+<link type="text/css" rel="stylesheet" href="//cdn.datatables.net/1.10.5/css/jquery.dataTables.css" media="all" />
+<link type="text/css" rel="stylesheet" href="//cdn.datatables.net/responsive/1.0.4/css/dataTables.responsive.css" media="all" />
+  <script type="text/javascript" src="http://magic.wizards.com/sites/all/modules/contrib/jquery_update/replace/jquery/1.8/jquery.min.js?v=1.8.3"></script>
+<script type="text/javascript" src="http://magic.wizards.com/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="http://magic.wizards.com/misc/drupal.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.core.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.widget.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/modules/contrib/jquery_update/replace/ui/external/jquery.cookie.js?v=67fb34f6a866c40d0570"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/modules/contrib/jquery_update/replace/misc/jquery.form.min.js?v=2.69"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.mouse.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/modules/contrib/jquery_update/replace/ui/ui/minified/jquery.ui.draggable.min.js?v=1.10.2"></script>
+<script type="text/javascript" src="http://magic.wizards.com/misc/ajax.js?v=7.54"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/modules/contrib/jquery_update/js/jquery_update.js?v=0.0.1"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/modules/custom/wiz_autocard/js/wiz_autocard.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/modules/custom/wiz_autocard/js/jquery.qtip-1.0.0-rc3.min.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/modules/features/wiz_bean_content_deck_list/d3.v3.min.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/modules/features/wiz_bean_content_deck_list/wiz_bean_content_deck_list.charts.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/modules/custom/wiz_autocard/wiz_decklist_filter/js/wiz_decklist_filter.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/modules/custom/wiz_show_period/js/moment.min.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/modules/features/wiz_views_events_calendar/js/idangerous.swiper-2.1.min.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/modules/features/wiz_views_events_calendar/js/idangerous.swiper.scrollbar-2.1.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/modules/features/wiz_views_events_calendar/js/custom.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/misc/progress.js?v=7.54"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/modules/contrib/ctools/js/modal.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/modules/contrib/modal_forms/js/modal_forms_popup.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/modules/custom/wiz_deletecookies/js/deletecookies.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/modules/custom/wiz_deletecookies/js/jquery.cookie.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/misc/autocomplete.js?v=7.54"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/modules/contrib/google_analytics/googleanalytics.js?oqvyyu"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-15020098-13", {"cookieDomain":"auto"});ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, { "pathToTheme": "sites/all/themes/wiz_mtg" });
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://accounts.wizards.com/Widget/Widget.js"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/modules/custom/wiz_npsu/js/npsu_widget.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/image-comparison-slider.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/country_cdn.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/libraries/foresee/foresee-trigger.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/lib/jquery.min.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/lib/jquery-ui.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/lib/content-gallery-grid/modernizr.custom.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/lib/jquery.fancybox.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/lib/jquery.scrollbar.min.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/lib/jquery.mmenu.oncanvas.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/lib/jquery.columnlist.min.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/lib/dropdown.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/lib/owl.carousel.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/lib/stacktable.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/lib/arketype.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/lib/jquery.unveil.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/lib/jquery.mCustomScrollbar.concat.min.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/GeoBlocker.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/AudioPlayer.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/CardsLayout.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/ImagesAnimator.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/immersive-experience-homepage-custom.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/immersive-experience-event-custom.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/interstitials.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/community.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/inline-features.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/MainMenu.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/ParallaxBackground.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/PodcastListItem.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/ShowHideListItems.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/TopRankings.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/VideoPlaylist.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/core.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/mx.js?oqvyyu"></script>
+<script type="text/javascript" src="//cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="//cdn.datatables.net/responsive/1.0.4/js/dataTables.responsive.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"en\/","ajaxPageState":{"theme":"wiz_mtg","theme_token":"CCfNtMQb8tPDT6nYmL1tgTNcJeA8_2sKH-yULbLoyWQ","jquery_version":"1.8","js":{"sites\/all\/themes\/wiz_mtg\/js\/ShareButton.js":1,"sites\/all\/modules\/features\/wiz_bean_content_deck_list\/wiz_bean_content_deck_list.js":1,"sites\/all\/modules\/features\/wiz_bean_content_deck_list\/masonry.pkgd.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.8\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.core.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.widget.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.mouse.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.draggable.min.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/contrib\/jquery_update\/js\/jquery_update.js":1,"sites\/all\/modules\/custom\/wiz_autocard\/js\/wiz_autocard.js":1,"sites\/all\/modules\/custom\/wiz_autocard\/js\/jquery.qtip-1.0.0-rc3.min.js":1,"sites\/all\/modules\/features\/wiz_bean_content_deck_list\/d3.v3.min.js":1,"sites\/all\/modules\/features\/wiz_bean_content_deck_list\/wiz_bean_content_deck_list.charts.js":1,"sites\/all\/modules\/custom\/wiz_autocard\/wiz_decklist_filter\/js\/wiz_decklist_filter.js":1,"sites\/all\/modules\/custom\/wiz_show_period\/js\/moment.min.js":1,"sites\/all\/modules\/features\/wiz_views_events_calendar\/js\/idangerous.swiper-2.1.min.js":1,"sites\/all\/modules\/features\/wiz_views_events_calendar\/js\/idangerous.swiper.scrollbar-2.1.js":1,"sites\/all\/modules\/features\/wiz_views_events_calendar\/js\/custom.js":1,"misc\/progress.js":1,"sites\/all\/modules\/contrib\/ctools\/js\/modal.js":1,"sites\/all\/modules\/contrib\/modal_forms\/js\/modal_forms_popup.js":1,"sites\/all\/modules\/custom\/wiz_deletecookies\/js\/deletecookies.js":1,"sites\/all\/modules\/custom\/wiz_deletecookies\/js\/jquery.cookie.js":1,"misc\/autocomplete.js":1,"sites\/all\/modules\/contrib\/google_analytics\/googleanalytics.js":1,"0":1,"1":1,"https:\/\/accounts.wizards.com\/Widget\/Widget.js":1,"sites\/all\/modules\/custom\/wiz_npsu\/js\/npsu_widget.js":1,"sites\/all\/themes\/wiz_mtg\/js\/image-comparison-slider.js":1,"sites\/all\/themes\/wiz_mtg\/js\/country_cdn.js":1,"sites\/all\/libraries\/foresee\/foresee-trigger.js":1,"sites\/all\/themes\/wiz_mtg\/js\/lib\/jquery.min.js":1,"sites\/all\/themes\/wiz_mtg\/js\/lib\/jquery-ui.js":1,"sites\/all\/themes\/wiz_mtg\/js\/lib\/content-gallery-grid\/modernizr.custom.js":1,"sites\/all\/themes\/wiz_mtg\/js\/lib\/jquery.fancybox.js":1,"sites\/all\/themes\/wiz_mtg\/js\/lib\/jquery.scrollbar.min.js":1,"sites\/all\/themes\/wiz_mtg\/js\/lib\/jquery.mmenu.oncanvas.js":1,"sites\/all\/themes\/wiz_mtg\/js\/lib\/jquery.columnlist.min.js":1,"sites\/all\/themes\/wiz_mtg\/js\/lib\/dropdown.js":1,"sites\/all\/themes\/wiz_mtg\/js\/lib\/owl.carousel.js":1,"sites\/all\/themes\/wiz_mtg\/js\/lib\/stacktable.js":1,"sites\/all\/themes\/wiz_mtg\/js\/lib\/arketype.js":1,"sites\/all\/themes\/wiz_mtg\/js\/lib\/jquery.unveil.js":1,"sites\/all\/themes\/wiz_mtg\/js\/lib\/jquery.mCustomScrollbar.concat.min.js":1,"sites\/all\/themes\/wiz_mtg\/js\/GeoBlocker.js":1,"sites\/all\/themes\/wiz_mtg\/js\/AudioPlayer.js":1,"sites\/all\/themes\/wiz_mtg\/js\/CardsLayout.js":1,"sites\/all\/themes\/wiz_mtg\/js\/ImagesAnimator.js":1,"sites\/all\/themes\/wiz_mtg\/js\/immersive-experience-homepage-custom.js":1,"sites\/all\/themes\/wiz_mtg\/js\/immersive-experience-event-custom.js":1,"sites\/all\/themes\/wiz_mtg\/js\/interstitials.js":1,"sites\/all\/themes\/wiz_mtg\/js\/community.js":1,"sites\/all\/themes\/wiz_mtg\/js\/inline-features.js":1,"sites\/all\/themes\/wiz_mtg\/js\/MainMenu.js":1,"sites\/all\/themes\/wiz_mtg\/js\/ParallaxBackground.js":1,"sites\/all\/themes\/wiz_mtg\/js\/PodcastListItem.js":1,"sites\/all\/themes\/wiz_mtg\/js\/ShowHideListItems.js":1,"sites\/all\/themes\/wiz_mtg\/js\/TopRankings.js":1,"sites\/all\/themes\/wiz_mtg\/js\/VideoPlaylist.js":1,"sites\/all\/themes\/wiz_mtg\/js\/core.js":1,"sites\/all\/themes\/wiz_mtg\/js\/mx.js":1,"\/\/cdn.datatables.net\/1.10.5\/js\/jquery.dataTables.min.js":1,"\/\/cdn.datatables.net\/responsive\/1.0.4\/js\/dataTables.responsive.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"sites\/all\/modules\/contrib\/calendar\/css\/calendar_multiday.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/contrib\/mollom\/mollom.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/features\/wiz_views_events_calendar\/css\/idangerous.swiper.css":1,"sites\/all\/modules\/features\/wiz_views_events_calendar\/css\/idangerous.swiper.scrollbar.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/modal.css":1,"sites\/all\/modules\/contrib\/modal_forms\/css\/modal_forms_popup.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/modules\/custom\/wiz_npsu\/css\/npsu.css":1,"sites\/all\/modules\/custom\/wiz_npsu_mtg\/css\/npsu_mtg.css":1,"sites\/all\/themes\/wiz_mtg\/css\/jquery.fancybox.css":1,"sites\/all\/themes\/wiz_mtg\/css\/jquery-ui-mod.css":1,"sites\/all\/themes\/wiz_mtg\/css\/owl.carousel.css":1,"sites\/all\/themes\/wiz_mtg\/css\/scrollbars.css":1,"sites\/all\/themes\/wiz_mtg\/css\/fonts.css":1,"sites\/all\/themes\/wiz_mtg\/css\/core.css":1,"sites\/all\/themes\/wiz_mtg\/css\/header.css":1,"sites\/all\/themes\/wiz_mtg\/css\/footer.css":1,"sites\/all\/themes\/wiz_mtg\/css\/page-header.css":1,"sites\/all\/themes\/wiz_mtg\/css\/medias.css":1,"sites\/all\/themes\/wiz_mtg\/css\/search.css":1,"sites\/all\/themes\/wiz_mtg\/css\/decklist.css":1,"sites\/all\/themes\/wiz_mtg\/css\/articles.css":1,"sites\/all\/themes\/wiz_mtg\/css\/game-info.css":1,"sites\/all\/themes\/wiz_mtg\/css\/events.css":1,"sites\/all\/themes\/wiz_mtg\/css\/community.css":1,"sites\/all\/themes\/wiz_mtg\/css\/mx.css":1,"sites\/all\/themes\/wiz_mtg\/css\/sections\/immersive.css":1,"sites\/all\/themes\/wiz_mtg\/css\/sections\/interstitials.css":1,"sites\/all\/themes\/wiz_mtg\/css\/styles-extended.css":1,"sites\/all\/themes\/wiz_mtg\/css\/legacy.css":1,"sites\/all\/themes\/wiz_mtg\/css\/legacyStyles.css":1,"sites\/all\/themes\/wiz_mtg\/css\/_theme-override.css":1,"sites\/all\/themes\/wiz_mtg\/css\/geo-blocker.css":1,"\/\/fonts.googleapis.com\/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic":1,"\/\/cdn.datatables.net\/1.10.5\/css\/jquery.dataTables.css":1,"\/\/cdn.datatables.net\/responsive\/1.0.4\/css\/dataTables.responsive.css":1}},"CToolsModal":{"loadingText":"Loading...","closeText":"Close Window","closeImage":"\u003Cimg typeof=\u0022foaf:Image\u0022 src=\u0022http:\/\/magic.wizards.com\/sites\/all\/modules\/contrib\/ctools\/images\/icon-close-window.png\u0022 alt=\u0022Close window\u0022 title=\u0022Close window\u0022 \/\u003E","throbber":"\u003Cimg typeof=\u0022foaf:Image\u0022 src=\u0022http:\/\/magic.wizards.com\/sites\/all\/modules\/contrib\/ctools\/images\/throbber.gif\u0022 alt=\u0022Loading\u0022 title=\u0022Loading...\u0022 \/\u003E"},"modal-popup-small":{"modalSize":{"type":"fixed","width":300,"height":300},"modalOptions":{"opacity":0.85,"background":"#000"},"animation":"fadeIn","modalTheme":"ModalFormsPopup","throbber":"\u003Cimg typeof=\u0022foaf:Image\u0022 src=\u0022http:\/\/magic.wizards.com\/sites\/all\/modules\/contrib\/modal_forms\/images\/loading_animation.gif\u0022 alt=\u0022Loading...\u0022 title=\u0022Loading\u0022 \/\u003E","closeText":"Close"},"modal-popup-medium":{"modalSize":{"type":"fixed","width":330,"height":450},"modalOptions":{"opacity":0.85,"background":"#000"},"animation":"fadeIn","modalTheme":"ModalFormsPopup","throbber":"\u003Cimg typeof=\u0022foaf:Image\u0022 src=\u0022http:\/\/magic.wizards.com\/sites\/all\/modules\/contrib\/modal_forms\/images\/loading_animation.gif\u0022 alt=\u0022Loading...\u0022 title=\u0022Loading\u0022 \/\u003E","closeText":"Close"},"modal-popup-large":{"modalSize":{"type":"scale","width":0.8,"height":0.8},"modalOptions":{"opacity":0.85,"background":"#000"},"animation":"fadeIn","modalTheme":"ModalFormsPopup","throbber":"\u003Cimg typeof=\u0022foaf:Image\u0022 src=\u0022http:\/\/magic.wizards.com\/sites\/all\/modules\/contrib\/modal_forms\/images\/loading_animation.gif\u0022 alt=\u0022Loading...\u0022 title=\u0022Loading\u0022 \/\u003E","closeText":"Close"},"wiz_core":{"wiz_core_switch_in_days":14,"wiz_core_switch_in_visits":10,"wiz_core_switch_b_path":"home"},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"npsu_widget":{"enabled":true,"logged_in":"false"},"urlIsAjaxTrusted":{"\/en\/articles\/archive\/making-magic\/mechanical-color-pie-2017-2017-06-05":true}});
+//--><!]]>
+</script>
+
+  
+        <style>
+      @media all {
+        header .home span {
+          background: url(http://magic.wizards.com/sites/mtg/files/logo-magic.png) no-repeat;
+          background-size: 100% 100px;
+
+        }
+        #mobile-menu .header .logo a {
+          background: url(http://magic.wizards.com/sites/mtg/files/logo-magic.png);
+          background-size: 100% 100%;
+        }
+        #page.snap-menu header .home span {
+          background: url(http://magic.wizards.com/sites/mtg/files/logo-magic.png);
+          background-size: 100% 50px;
+        }
+      }
+      @media (max-width: 1200px) {
+        header .home span {
+          background: url(http://magic.wizards.com/sites/mtg/files/logo-magic.png);
+          background-size: 100% 50px;
+        }
+      }
+    </style>
+  </head>
+
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-1160871 node-type-article i18n-en content-non-panels role-anonymous-user with-subnav page-articles-archive-making-magic-mechanical-color-pie-2017-2017-06-05 section-articles" >
+  <script>
+  /* Interstitials variables */
+  var Interstitials = {
+    list: [
+                        ]
+  };
+  </script>
+
+  <div id="page" class="section_articles article_detail">
+    
+        <div id="mobile-menu">
+  <div class="header">
+    <div class="logo"></div>
+    <div class="toggle-menu-button"></div>
+  </div>
+  <nav>
+    <div class="menu-wrapper" data-back-label="Back"></div>
+  </nav>
+</div>
+
+<div id="viewport">
+  <!-- Header -->
+  <header>
+    <div class="wrapper">
+      <div id="utils">
+        <a href="http://locator.wizards.com/" class="locator">Locator</a> <a href="http://gatherer.wizards.com" class="gatherer">Card Database</a>        <a href="/en" title="Sign In" onClick="ga(&#039;send&#039;, &#039;event&#039;, &#039;SignIn&#039;, &#039;Click&#039;, &#039;Top-Menu&#039;); return wotcAccountWidget.showLoginModal();" id="SignInButton" class="login">Sign In</a> | <a href="/en" title="Sign Up" onClick="ga(&#039;send&#039;, &#039;event&#039;, &#039;Signup&#039;, &#039;Click&#039;, &#039;Top-Menu&#039;); return wotcAccountWidget.showJoinModal();" id="RegisterButton" class="register">Sign Up</a>        <div id="search-form">
+          <form action="/en/articles/archive/making-magic/mechanical-color-pie-2017-2017-06-05" method="post" id="wiz-search-bar-form--2" accept-charset="UTF-8"><div><input type="hidden" name="search-site" value="acquia_search" />
+<div class="form-item form-type-textfield form-item-search-string">
+ <input placeholder="Search Anything" type="text" id="edit-search-string--3" name="search-string" value="" size="25" maxlength="128" class="form-text required" />
+</div>
+<input type="submit" id="edit-search-button--3" name="op" value="Search" class="form-submit" /><input type="hidden" name="form_build_id" value="form-je23BeiyfIkgTyHYta63jThHBGbk9J2EjqThVWJeeQU" />
+<input type="hidden" name="form_id" value="wiz_search_bar_form" />
+</div></form>        </div>
+      </div>
+
+      <!-- Menu -->
+      <nav id="menu">
+        <a class="home" href="/en"><span>Magic the Gathering</span></a>
+
+        <div class="menu-wrapper">
+          <ul class="menu"><li class="mn_section_new-to-magic<script>jquery('#signinbutton').attr('onclick',-'return-wotcaccountwidget.showloginmodal();');</script> has-children"><a href="/en/new-to-magic" title="Are you new to Magic? This is the place to start!"><span>NEW TO MAGIC<script>jQuery('#SignInButton').attr('onclick', 'return wotcAccountWidget.showLoginModal();');</script></span></a><ul class="menu"><li class="mn_section_new-to-magic-home"><a href="/en/new-to-magic"><span>New To Magic Home</span></a></li>
+<li class="mn_section_strategy"><a href="/en/content/strategy"><span>Strategy</span></a></li>
+<li class="mn_section_lore"><a href="/en/new-to-magic/lore"><span>Lore</span></a></li>
+<li class="mn_section_community"><a href="http://magic.wizards.com/en/community"><span>Community</span></a></li>
+</ul></li>
+<li class="mn_section_products has-children"><a href="http://magic.wizards.com/en/products/amonkhet"><span>PRODUCTS</span></a><ul class="menu"><li class="mn_section_featured-<br>release"><a href="http://magic.wizards.com/en/products/amonkhet"><span>FEATURED <BR>RELEASE</span></a></li>
+<li class="mn_section_coming-soon"><a href="/en/products/coming-soon"><span>COMING SOON</span></a></li>
+<li class="mn_section_magic-duels"><a href="/en/content/magic-duels"><span>MAGIC DUELS</span></a></li>
+<li class="mn_section_magic-online"><a href="/en/content/magic-online-products-game-info"><span>MAGIC ONLINE</span></a></li>
+<li class="mn_section_card-set-archive"><a href="/en/game-info/products/card-set-archive"><span>CARD SET ARCHIVE</span></a></li>
+</ul></li>
+<li class="mn_section_gameplay has-children"><a href="http://magic.wizards.com/en/game-information"><span>GAMEPLAY</span></a><ul class="menu"><li class="mn_section_gameplay-home"><a href="/en/gameplay"><span>Gameplay Home</span></a></li>
+<li class="mn_section_about-the-game"><a href="/en/gameplay/about-the-game"><span>ABOUT THE GAME</span></a></li>
+<li class="mn_section_how-to-play"><a href="/en/gameplay/how-to-play"><span>HOW TO PLAY</span></a></li>
+<li class="mn_section_how-to-build-a-deck"><a href="/en/gameplay/how-to-build-a-deck"><span>HOW TO BUILD A DECK</span></a></li>
+<li class="mn_section_improve-your-game"><a href="/en/gameplay/improve-your-game"><span>IMPROVE YOUR GAME</span></a></li>
+<li class="mn_section_rules-&-formats"><a href="/en/gameplay/rules-and-formats"><span>RULES & FORMATS</span></a></li>
+</ul></li>
+<li class="mn_section_story has-children"><a href="http://magic.wizards.com/en/game-info/story/magic-story"><span>STORY</span></a><ul class="menu"><li class="mn_section_magic's-story"><a href="/en/story"><span>MAGIC'S STORY</span></a></li>
+<li class="mn_section_planeswalkers"><a href="/en/story/planeswalkers"><span>PLANESWALKERS</span></a></li>
+<li class="mn_section_planes"><a href="/en/story/planes"><span>PLANES</span></a></li>
+</ul></li>
+<li class="mn_section_events has-children"><a href="/en/events"><span>EVENTS</span></a><ul class="menu"><li class="hub-link EVENTS"><a href="/en/events"><span>EVENTS</span></a></li>
+<li class="mn_section_events-home"><a href="/en/events"><span>EVENTS HOME</span></a></li>
+<li class="mn_section_what-is-<br>organized-play"><a href="/en/events/what-is-organized-play"><span>WHAT IS <br>ORGANIZED PLAY?</span></a></li>
+<li class="mn_section_event<br>-types"><a href="/en/events/event-types"><span>EVENT<br> TYPES</span></a></li>
+<li class="mn_section_coverage has-children"><a class="nolink"><span>COVERAGE</span></a><ul class="menu"><li class="mn_section_coverage-archive"><a href="/en/events/coverage"><span>COVERAGE ARCHIVE</span></a></li>
+<li class="mn_section_top-players"><a href="/en/events/coverage/top-players"><span>TOP PLAYERS</span></a></li>
+</ul></li>
+<li class="mn_section_schedules"><a href="/en/content/premier-events-schedule#/overview"><span>SCHEDULES</span></a></li>
+<li class="mn_section_resources has-children"><a class="nolink"><span>RESOURCES</span></a><ul class="menu"><li class="mn_section_planeswalker-points"><a href="/en/events/resources/planeswalker-points"><span>PLANESWALKER POINTS</span></a></li>
+<li class="mn_section_judges"><a href="/en/events/resources/judges"><span>JUDGES</span></a></li>
+</ul></li>
+</ul></li>
+<li class="mn_section_articles has-children current"><a href="/en/articles" class="active-trail"><span>ARTICLES</span></a><ul class="menu"><li class="hub-link ARTICLES"><a href="/en/articles"><span>ARTICLES</span></a></li>
+<li class="mn_section_articles-home"><a href="/en/articles"><span>ARTICLES HOME</span></a></li>
+<li class="mn_section_columns has-children"><a id="columns" class="nolink"><span>COLUMNS</span></a><ul class="menu"><li class="mn_section_columnists"><a href="/en/articles/columns/columnists"><span>COLUMNISTS</span></a></li>
+<li class="mn_section_making-magic"><a href="/en/articles/columns/making-magic"><span>MAKING MAGIC</span></a></li>
+<li class="mn_section_magic-story"><a href="/en/articles/columns/magic-story"><span>MAGIC STORY</span></a></li>
+<li class="mn_section_top-decks"><a href="/en/articles/columns/top-decks"><span>TOP DECKS</span></a></li>
+<li class="mn_section_organized-<br>play"><a href="/en/articles/columns/organized-play" title="Organized Play"><span>ORGANIZED <br>PLAY</span></a></li>
+<li class="mn_section_latest-<br>developments"><a href="/en/articles/columns/latest-developments"><span>LATEST <br>DEVELOPMENTS</span></a></li>
+</ul></li>
+<li class="mn_section_archives current"><a href="/en/articles/archive" class="active-trail"><span>ARCHIVES</span></a></li>
+<li class="mn_section_winning-decks"><a href="/en/articles/winning-decks"><span>WINNING DECKS</span></a></li>
+<li class="mn_section_media has-children"><a class="nolink"><span>MEDIA</span></a><ul class="menu"><li class="mn_section_videos"><a href="/en/articles/media/videos"><span>VIDEOS</span></a></li>
+<li class="mn_section_podcasts"><a href="/en/articles/media/podcasts"><span>PODCASTS</span></a></li>
+<li class="mn_section_wallpapers"><a href="/en/articles/media/wallpapers"><span>WALLPAPERS</span></a></li>
+<li class="mn_section_fan-kits"><a href="/en/articles/media/fan-kits"><span>FAN KITS</span></a></li>
+</ul></li>
+</ul></li>
+</ul>        </div>
+      </nav>
+    </div>
+  </header>
+
+  
+  <div id="content-wrapper" data-geo-blocking-notice='{"text":{"value":"","format":"full_html"},"countries":[]}' data-geo-blocking-redirection='{"url":"","countries":[]}'>
+      <div class="region region-content">
+    
+<div id="block-system-main" class=" block block-system block-odd first last main clearfix">
+  <div class="block-inner">
+                <div class="content" >
+      <div id="content" class="page-width">
+
+  <div id="main-content">
+    <div id="breadcrumb">
+              <span ><a href="/en/articles">ARTICLES HOME</a></span>
+              <span ><a href="/en/articles/archive">ARCHIVES</a></span>
+              <span class="current"><a href="/en/articles/columns/making-magic">Making Magic</a></span>
+          </div>
+    <h1>Mechanical Color Pie 2017</h1>
+    <p class="posted-in">
+      Posted in      <a href="/en/articles/columns/making-magic">Making Magic</a>
+      on June 5, 2017    </p>
+
+    <!-- BEGIN :: ARTICLE -->
+    <article>
+      <div class="article-header">
+
+                  <div class="author">
+            <img src="http://magic.wizards.com/sites/mtg/files/styles/auth_small/public/images/person/authorpic_markrosewater.jpg?itok=zBh_ms9Z" alt="" />
+            <p>By Mark Rosewater</p>
+            <p class="links">
+                              <span><a href="javascript:void(0);" class="article-author-biography" onClick="ga('send', 'event', 'Article', 'Author', 'Mark Rosewater-Bio');">Bio</a></span>
+                                            <span><a href="/en/articles/archive/116841" onClick="ga('send', 'event', 'Article', 'Author', 'Mark Rosewater-Archive');">Archive</a></span>
+                                            <span><a href="http://twitter.com/maro254" onClick="ga('send', 'event', 'Article', 'Author', 'Mark Rosewater-Twitter');" target="_blank">Twitter</a></span>
+                          </p>
+            <div id="author-biography">
+              Working in R&D since '95, Mark became Magic head designer in '03. His hobbies: spending time with family, writing about Magic in all mediums, and creating short bios.            </div>
+          </div>
+        
+        <div class="sharing">
+          <div class="share-article">Share Article</div>
+          <div class="social-share">
+            <a class="facebook" href="#" data-share-url="http://magic.wizards.com/articles/archive/making-magic/mechanical-color-pie-2017-2017-06-05"><span>Share</span></a>
+            <a class="twitter" href="#" data-share-url="http://magic.wizards.com/articles/archive/making-magic/mechanical-color-pie-2017-2017-06-05"><span>Tweet</span></a>
+            <a class="google" href="#" data-share-url="http://magic.wizards.com/articles/archive/making-magic/mechanical-color-pie-2017-2017-06-05"><span>Share</span></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div id="content-detail-page-of-an-article">
+        <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html><body><p>Today, I'm going to do something that players have been asking me to do for years. I'm going to lay out the color pie as it connects to all (okay most&mdash;I'm sure I'll forget a few things) of the mechanics. The reason I've been hesitant to do this is because the color pie, like the game, is always in flux and I was concerned that once I write it down, it would confuse people when they looked it up years later. So, here's what I've decided to do. I'm going to make this a feature I do every few years so that I can update it and show the flux.</p>
+
+<p>A few caveats before I jump in:</p>
+
+<ol><li>This mechanical color pie represents where the color pie currently is, today, June 5, 2017. There's no promise that what I write today will always be true. In fact, the promise is the exact opposite&mdash;some of this will change over time. Metaphorically, I'm taking a snapshot of the mechanical color pie, but it's going to keep on growing and won't always look as it does in this picture.</li>
+	<li>I work in the future, so while I'm going to try my best to talk about the color pie as it exists on the printed cards, a little of the future might leak through.</li>
+	<li>What I'm writing here is the default center. Different sets and blocks will push the color pie in certain directions, so what I'm writing down isn't necessarily always reflected by the latest printed cards. Prowess, as an example, is an evergreen mechanic primary in blue and secondary in red. Some sets have mechanics that don't mesh well with prowess, so we might do fewer prowess cards in that block or leave it out completely. That doesn't change where prowess sits in the color pie.</li>
+	<li>We are constantly experimenting with colors, so some of what I'm going to talk about today are things we are currently trying that maybe won't stick.</li>
+	<li>Once again, I'm human and there's a lot to cover. I'm sure I'll forget a few things.</li>
+</ol><p>With that said, let's talk color pie.</p>
+
+<p class="rtecenter"><img alt="" src="http://media.wizards.com/2016/images/daily/MM20161114_Wheel.png"></p>
+
+<p>To begin, we need to start by laying down some terminology:</p>
+
+<p class="rtecenter"><img alt="" src="http://media.wizards.com/2017/images/daily/WUBRG_A.png"></p>
+
+<ul><li><strong>Primary</strong>&mdash;This is the color (or colors) the ability is seen most in. That means it shows up in the highest volume and usually at the lowest rarity that the type of effects get used at. The primary color will almost always get this effect in a set if it's an ability we do every set. It also tends to be the color that most often pushes the power level, if it's an effect we push the power level on. There's a wide range on what primary means, because different types of effects exist at different levels. A card secondary in flying can show up way more than a card primary in taking extra turns, for instance, because we have so many more flying cards than extra-turn cards.</li>
+</ul><p class="rtecenter"><img alt="" src="http://media.wizards.com/2017/images/daily/WUBRG_B.png"></p>
+
+<ul><li><strong>Secondary</strong>&mdash;This is the color (or colors) that an ability shows up in on a somewhat regular basis, but not as often as the primary and not always in as low of rarity as the primary. If the effect is something we do a lot of, the secondary color will usually get the ability in most sets. Sometimes a secondary color will have restrictions. For instance, red is secondary in flying, but only on Dragons and Phoenixes.</li>
+</ul><p class="rtecenter"><img alt="" src="http://media.wizards.com/2017/images/daily/WUBRG_C.png"></p>
+
+<ul><li><strong>Tertiary</strong>&mdash;This is the color (or colors) that get the ability occasionally. It's not every set. For some abilities, we could go years without seeing a tertiary color using it. Tertiary colors can often come with rules, meaning it's a very narrow subset that makes use of the mechanic. For example, black is tertiary in first strike and gets it primarily on Knights, most often when paired against a mirrored white Knight.</li>
+</ul><p>While there's always a primary color, there's not always a secondary or tertiary color. Also, more than one color can be primary, secondary, or tertiary. Cards that grant an ability to others usually are primary in that ability, occasionally secondary, and almost never tertiary. Multicolor cards, when trying to capture the feel of a color, will use primary and secondary abilities but (almost) never tertiary. For example, white is tertiary in reach. We wouldn't make a white-black card (black doesn't have reach) wherein the creature is "getting" reach from its white half.</p>
+
+<p>I want to stress one more time that primary, secondary, and tertiary are relative to how often an effect is used. Things that are secondary in a color, for example, may be far more prevalent in that color than things that are primary if the items in question occur at a higher frequency.</p>
+
+<ul><li><strong>N</strong>&mdash;"N" represents a natural number (1 or greater). +N/+0, for instance means pumping a creature for an undefined amount. When defining abilities with numbers, we usually use N to cover all cases. If N appears multiple times within one mechanic (+N/+N, for example), N can represent different numbers.</li>
+	<li><strong>Spells</strong>&mdash;For the purpose of today's discussion, when I say "spells" I am referring to instants and sorceries.</li>
+</ul><p>I'm now going to list the mechanical color pie, separating the primary, secondary, and tertiary abilities for each color. To make this easier to navigate, I've split each list into its own drop-down section. Simply click the header to see the mechanics. Afterward, I'll go through all the abilities in alphabetical order.</p>
+
+<div class="collapsibleBlock">
+<dl class="showHideListItems" style="border: 1px solid black;"><dt>
+	<h2>White&mdash;Primary</h2>
+	</dt>
+	<dd>
+	<div class="wrapper">
+	<div>
+	<p class="rtecenter"><img alt="" src="http://media.wizards.com/2017/images/daily/MM20170605_Wa.png"></p>
+
+	<ul><li>Banisher Priest-like effects (When this card enters the battlefield, exile target creature/permanent until this card leaves play.)</li>
+		<li>Blocking extra creatures (This creature can block an additional N creatures each combat.)</li>
+		<li>Bring back creatures/permanents that went to the graveyard this turn</li>
+		<li>Can't be attacked (Creatures can't attack you.)</li>
+		<li>Destroy target attacking or blocking creature</li>
+		<li>Destroy target creature that damaged you or a creature you control this turn</li>
+		<li>Destroy target tapped creature</li>
+		<li>Destroy target creature with power 4 or greater</li>
+		<li>Destroy all creatures</li>
+		<li>Destroy all creatures with power 4 or greater</li>
+		<li>+N/+N (on Auras)</li>
+		<li>-N/+N (on spells)</li>
+		<li>-N/+N (on Auras)</li>
+		<li>+0/+N (on creatures)</li>
+		<li>+0/+N (on spells)</li>
+		<li>+0/+N (on Auras)</li>
+		<li>+N/+N to your team, one-shot</li>
+		<li>+0/+N to your team, one-shot</li>
+		<li>+N/+N to your team, ongoing</li>
+		<li>+0/+N to your team, ongoing</li>
+		<li>Damage prevention (Prevent the next N damage that would be dealt to target creature/player.)</li>
+		<li>Damage redirection (Prevent the next N damage that would be dealt to target creature/player this turn. If damage is prevented in this way, this card deals that much damage to target creature/player.)</li>
+		<li>Defender</li>
+		<li>Deal N damage to target attacking or blocking creature</li>
+		<li>Double strike</li>
+		<li>Enchantment destruction</li>
+		<li>"Enchantress" ability (Whenever you play an enchantment, draw a card.)</li>
+		<li>Exiling cards from graveyard</li>
+		<li>First strike</li>
+		<li>"Flicker" (Exile target creature/permanent, then return it to the battlefield under its owner's control&mdash;occasionally the creature/permanent returns at the end of the turn.)</li>
+		<li>Flying</li>
+		<li>Friendly to enchantments</li>
+		<li>"Gaseous Form" (This creature neither deals nor receives damage.)</li>
+		<li>Indestructible</li>
+		<li>Life gain</li>
+		<li>Lifelink</li>
+		<li>"Meddling" (Name a spell. That spell can't be played as long as this card is on the battlefield.)</li>
+		<li>Pacifism-like effect (Enchanted creature cannot attack or block.)</li>
+		<li>Preventing actions (Your opponents can't cast spells this turn.)</li>
+		<li>Protection</li>
+		<li>Putting enchantments from hand onto the battlefield</li>
+		<li>Putting planeswalkers from hand onto the battlefield</li>
+		<li>Return target enchantment from graveyard to hand</li>
+		<li>Rules setting</li>
+		<li>Tapping creatures</li>
+		<li>Taxing</li>
+		<li>Token generation</li>
+		<li>"Tutor" for an enchantment (Search your library for an enchantment card and put that card in your hand.)</li>
+		<li>"Tutor" for a planeswalker (Search your library for a planeswalker card and put that card in your hand.)</li>
+		<li>Vigilance</li>
+		<li>"Warlord" (This creature's power and toughness are equal to the number of creatures you control.)</li>
+	</ul></div>
+	</div>
+	</dd>
+</dl></div>
+
+<div class="collapsibleBlock">
+<dl class="showHideListItems" style="border: 1px solid black;"><dt>
+	<h2>White&mdash;Secondary</h2>
+	</dt>
+	<dd>
+	<div class="wrapper">
+	<div>
+	<p class="rtecenter"><img alt="" src="http://media.wizards.com/2017/images/daily/MM20170605_Wb.png"></p>
+
+	<ul><li>"Bounce" (Return target creature/permanent to its owner's hand.)</li>
+		<li>"Bounce" to library (Put a creature/permanent on top of its owner's library or some number of cards down.)</li>
+		<li>+N/+N (on spells)</li>
+		<li>+N/+0 (on creatures)</li>
+		<li>+N/+0 (on spells)</li>
+		<li>+N/+0 (on Auras)</li>
+		<li>Direct damage, multiple targets</li>
+		<li>Friendly to creatures</li>
+		<li>Friendly to lands</li>
+		<li>Increasing counters and/or tokens</li>
+		<li>Putting artifacts from hand onto the battlefield</li>
+		<li>"Reanimation" (Return a creature card from a graveyard to the battlefield.)</li>
+		<li>Return target artifact from graveyard to hand</li>
+		<li>Return target creature from graveyard to hand</li>
+		<li>Scry</li>
+		<li>"Tutor" for an artifact (Search your library for an artifact card and put that card in your hand.)</li>
+		<li>"Tutor" for a creature (Search your library for a creature card and put that card in your hand.)</li>
+		<li>Untapping creatures</li>
+		<li>Untaps itself</li>
+	</ul></div>
+	</div>
+	</dd>
+</dl></div>
+
+<div class="collapsibleBlock">
+<dl class="showHideListItems" style="border: 1px solid black;"><dt>
+	<h2>White&mdash;Tertiary</h2>
+	</dt>
+	<dd>
+	<div class="wrapper">
+	<p class="rtecenter"><img alt="" src="http://media.wizards.com/2017/images/daily/MM20170605_Wc.png"></p>
+
+	<ul><li>Animating lands (Target land becomes an N/N creature until end of turn.)</li>
+		<li>Basic land counting (Doing an effect equal to the number of basic lands of a certain type you control.)</li>
+		<li>Card draw</li>
+		<li>Color changing (Target/this creature becomes the color(s) of your choice until end of turn.)</li>
+		<li>Counterspell</li>
+		<li>-N/+N (on creatures)</li>
+		<li>-N/-N (on spells)</li>
+		<li>"Drain life" (Deal damage to a creature/player and gain life equal to that damage.)</li>
+		<li>Extra attack (Untap all creatures that attacked this turn. After this main phase, there is an additional combat phase followed by an additional main phase.)</li>
+		<li>Flash</li>
+		<li>"Fog" (Prevent all combat damage that would be dealt this turn.)</li>
+		<li>Land destruction</li>
+		<li>"Lhurgoyf" (This creature's power and toughness are equal to the number of cards in your/all graveyards.)</li>
+		<li>Prowess</li>
+		<li>Putting creatures from hand onto the battlefield</li>
+		<li>Reach</li>
+		<li>Trample</li>
+		<li>"Tutor" for a land (Search your library for a land card and put that card in your hand.)</li>
+	</ul></div>
+	</dd>
+</dl></div>
+
+<div class="collapsibleBlock">
+<dl class="showHideListItems" style="border: 1px solid black;"><dt>
+	<h2>Blue&mdash;Primary</h2>
+	</dt>
+	<dd>
+	<div class="wrapper">
+	<p class="rtecenter"><img alt="" src="http://media.wizards.com/2017/images/daily/MM20170605_Ua.png"></p>
+
+	<ul><li>"Bounce" (Return target creature/permanent to its owner's hand.)</li>
+		<li>"Bounce" to library (Put a creature/permanent on top of its owner's library or some number of cards down.)</li>
+		<li>Can't be blocked</li>
+		<li>Card draw</li>
+		<li>Card filtering (Look at the top N cards of your library and put N in your hand and put the rest on the bottom of the library in any order.)</li>
+		<li>Changing lands (Target land becomes the basic land type of your choice.)</li>
+		<li>Color changing (Target/this creature becomes the color(s) of your choice until end of turn.)</li>
+		<li>Copying permanents, permanently</li>
+		<li>Counterspell</li>
+		<li>Counter target activated/triggered ability</li>
+		<li>+N/-N (on creatures)</li>
+		<li>-N/+N (on creatures)</li>
+		<li>-N/-0 (on creatures)</li>
+		<li>-N/-0 (on spells)</li>
+		<li>-N/-0 (on Auras)</li>
+		<li>-N/-0 to their team, one-shot</li>
+		<li>"Curiosity" (Whenever this creature deals combat damage to an opponent, draw a card.)</li>
+		<li>Flash</li>
+		<li>"Flicker" (Exile target creature/permanent, then return it to the battlefield under its owner's control&mdash;occasionally the creature/permanent returns at the end of the turn.)</li>
+		<li>Flying</li>
+		<li>"Freeze" creature (Tap target creature. That creature doesn't untap during its controller's next untap step.)</li>
+		<li>Friendly to artifacts</li>
+		<li>Friendly to instants and sorceries</li>
+		<li>Hexproof</li>
+		<li>"Illusion ability" (Sacrifice this creature if it is the target of a spell or ability.)</li>
+		<li>Increasing counters and/or r\tokens</li>
+		<li>"Lockdown" (Enchanted creature doesn't untap.)</li>
+		<li>Looking at opponent's hand</li>
+		<li>"Looting" (Draw a card and discard a card.)</li>
+		<li>"Manipulate time" (End the turn.)</li>
+		<li>"Maro" ability (This creature's power and toughness are equal to the number of cards in our hand.)</li>
+		<li>"Milling" (Target player puts the top N cards from his or her library into his or her graveyard.)</li>
+		<li>Moving enchantments/counters</li>
+		<li>Playing cards off top of library</li>
+		<li>Prowess</li>
+		<li>Putting artifacts from hand onto the battlefield</li>
+		<li>Return target artifact from graveyard to hand</li>
+		<li>Return target instant from graveyard to hand</li>
+		<li>Scry</li>
+		<li>Spell copying (Copy target instant or sorcery spell. You may choose new targets for the copy.)</li>
+		<li>Spell redirection (Change the target of target spell with a single target.)</li>
+		<li>Stealing permanents, permanently</li>
+		<li>Switching power/toughness</li>
+		<li>"Time Walk" (Take an extra turn after this one.)</li>
+		<li>"Transformation" (Target creature becomes a color/card type with N power and N toughness.)</li>
+		<li>"Tutor" for an artifact (Search your library for an artifact card and put that card in your hand.)</li>
+		<li>"Tutor" for an instant or sorcery (Search your library for an instant or sorcery card and put that card in your hand.)</li>
+		<li>"Twiddle" (Tap or untap target creature/permanent.)</li>
+		<li>Untapping creatures</li>
+		<li>Untaps itself</li>
+		<li>"Wheeling" (All players discard their hand and draw N cards.)</li>
+	</ul></div>
+	</dd>
+</dl></div>
+
+<div class="collapsibleBlock">
+<dl class="showHideListItems" style="border: 1px solid black;"><dt>
+	<h2>Blue&mdash;Secondary</h2>
+	</dt>
+	<dd>
+	<div class="wrapper">
+	<div>
+	<p class="rtecenter"><img alt="" src="http://media.wizards.com/2017/images/daily/MM20170605_Ub.png"></p>
+
+	<ul><li>Basic land counting (Doing an effect equal to the number of basic lands of a certain type you control.)</li>
+		<li>Banisher Priest&ndash;like effect (When this card enters the battlefield, exile target creature/permanent until this card leaves play.)</li>
+		<li>Can't be countered</li>
+		<li>Copying permanents, temporarily</li>
+		<li>+N/+N (on Auras)</li>
+		<li>+0/+N (on Auras)</li>
+		<li>Defender</li>
+		<li>Forced attack (Target creature attacks this turn if able.)</li>
+		<li>Friendly to lands</li>
+		<li>"Gaseous Form" (This creature neither deals nor receives damage.)</li>
+		<li>"Polymorph" (Exile target creature. Its controller reveals cards from the top of his or her library until he or she reveals a creature card. That player puts that card onto the battlefield.)</li>
+		<li>Putting creatures from hand onto the battlefield</li>
+		<li>"Restocking" (Putting cards from graveyard back into your library.)</li>
+		<li>Return target sorcery from graveyard to hand</li>
+		<li>Rules setting</li>
+		<li>Tapping creatures</li>
+		<li>Token generation</li>
+		<li>"Tutor" for a creature (Search your library for a creature card and put that card in your hand.)</li>
+	</ul></div>
+	</div>
+	</dd>
+</dl></div>
+
+<div class="collapsibleBlock">
+<dl class="showHideListItems" style="border: 1px solid black;"><dt>
+	<h2>Blue&mdash;Tertiary</h2>
+	</dt>
+	<dd>
+	<div class="wrapper">
+	<div>
+	<p class="rtecenter"><img alt="" src="http://media.wizards.com/2017/images/daily/MM20170605_Uc.png"></p>
+
+	<ul><li>Animating lands (Target land becomes an N/N creature until end of turn.)</li>
+		<li>+N/+0 (on Auras)</li>
+		<li>+N/-N (on Auras)</li>
+		<li>-N/-N (on spells)</li>
+		<li>+N/+N to your team, ongoing</li>
+		<li>Indestructible</li>
+		<li>"Lhurgoyf" (This creature's power and toughness are equal to the number of cards in your/all graveyards.)</li>
+		<li>Protection</li>
+		<li>Putting enchantments from hand onto the battlefield</li>
+		<li>Trample</li>
+		<li>"Tutor" for a land (Search your library for a land card and put that card in your hand.)</li>
+		<li>Untapping Lands</li>
+	</ul></div>
+	</div>
+	</dd>
+</dl></div>
+
+<div class="collapsibleBlock">
+<dl class="showHideListItems" style="border: 1px solid black;"><dt>
+	<h2>Black&mdash;Primary</h2>
+	</dt>
+	<dd>
+	<div class="wrapper">
+	<p class="rtecenter"><img alt="" src="http://media.wizards.com/2017/images/daily/MM20170605_Ba.png"></p>
+
+	<ul><li>"Abyss" (All players/opponents must sacrifice a creature each turn.)</li>
+		<li>Basic land counting (Doing an effect equal to the number of basic lands of a certain type you control.)</li>
+		<li>Can't block</li>
+		<li>Cast spells out of graveyard</li>
+		<li>Destroy target creature</li>
+		<li>Destroy all creatures controlled by one player</li>
+		<li>+N/+N (on creatures)</li>
+		<li>+N/+0 (on spells)</li>
+		<li>+N/-N (on spells)</li>
+		<li>+N/-N (on Auras)</li>
+		<li>-N/-N (on creatures)</li>
+		<li>-N/-N (on spells)</li>
+		<li>-N/-N (on Auras)</li>
+		<li>-N/-N to their team, one-shot</li>
+		<li>-0/-N to their team, one-shot</li>
+		<li>-N/-N to their team, ongoing</li>
+		<li>Deathtouch</li>
+		<li>"Devil's Deal" permanents (Cards that grant you power but at a cost.)</li>
+		<li>Discard</li>
+		<li>"Drain life" (Deal damage to a creature/player and gain life equal to that damage.)</li>
+		<li>Exiling cards from graveyard</li>
+		<li>"Khab&aacute;l" ability (Whenever another creature dies, put a +1/+1 counter on this creature.)</li>
+		<li>Life loss</li>
+		<li>"Lobotomy" (Choose a nonland card name. Search target player's graveyard hand and library for all cards with that name and exile them.)</li>
+		<li>Menace</li>
+		<li>"Reanimation" (Return a creature card from a graveyard to the battlefield.)</li>
+		<li>Removing counters</li>
+		<li>Return target creature from graveyard to hand</li>
+		<li>Sacrifice a creature (Target player/all player(s) sacrifice a creature.)</li>
+		<li>"Sengir" ability (When a creature damaged by this creature dies, put a +1/+1 counter on this creature.)</li>
+		<li>"Specter" ability (When this creature deals combat damage to an opponent, that player discards a card.)</li>
+		<li>"Tutor" for any card (Search your library for a card and put that card in your hand.)</li>
+		<li>"You don't lose" (Permanents that prevent you from losing the game while they're on the battlefield, usually with an alternate means to lose.)</li>
+	</ul></div>
+	</dd>
+</dl></div>
+
+<div class="collapsibleBlock">
+<dl class="showHideListItems" style="border: 1px solid black;"><dt>
+	<h2>Black&mdash;Secondary</h2>
+	</dt>
+	<dd>
+	<div class="wrapper">
+	<div>
+	<p class="rtecenter"><img alt="" src="http://media.wizards.com/2017/images/daily/MM20170605_Bb.png"></p>
+
+	<ul><li>Card draw</li>
+		<li>Destroy target tapped creature</li>
+		<li>Destroy all creatures</li>
+		<li>+N/+N (on spells)</li>
+		<li>+N/+N (on Auras)</li>
+		<li>+N/+0 (on Auras)</li>
+		<li>+N/-N (on creatures)</li>
+		<li>-N/-0 (on spells)</li>
+		<li>-N/-0 (on Auras)</li>
+		<li>+N/+0 to your team, ongoing</li>
+		<li>Defender</li>
+		<li>Deal N damage to creature and/or player</li>
+		<li>Deal N damage to a creature that's been damaged this turn</li>
+		<li>Sacrifice a creature and deal damage to creature/player equal to the sacrificed creature's power/toughness</li>
+		<li>Flying</li>
+		<li>Friendly to lands</li>
+		<li>Haste</li>
+		<li>Indestructible</li>
+		<li>Land destruction</li>
+		<li>"Lhurgoyf" (This creature's power and toughness are equal to the number of cards in your/all graveyards.)</li>
+		<li>Life gain</li>
+		<li>Lifelink</li>
+		<li>Looking at opponent's hand</li>
+		<li>Mana production, temporary</li>
+		<li>"Milling" (Target player puts the top N cards from his or her library into his or her graveyard.)</li>
+		<li>"Punisher" effects (Opponent chooses one: thing X happens or thing Y happens.)</li>
+		<li>Rules setting</li>
+		<li>Scry</li>
+		<li>Token generation</li>
+		<li>"Tutor" for a creature (Search your library for a creature card and put that card in your hand.)</li>
+	</ul></div>
+	</div>
+	</dd>
+</dl></div>
+
+<div class="collapsibleBlock">
+<dl class="showHideListItems" style="border: 1px solid black;"><dt>
+	<h2>Black&mdash;Tertiary</h2>
+	</dt>
+	<dd>
+	<div class="wrapper">
+	<p class="rtecenter"><img alt="" src="http://media.wizards.com/2017/images/daily/MM20170605_Bc.png"></p>
+
+	<ul><li>Animating lands (Target land becomes an N/N creature until end of turn.)</li>
+		<li>Color changing (Target/this creature becomes the color(s) of your choice until end of turn.)</li>
+		<li>+N/+N to your team, ongoing</li>
+		<li>First strike</li>
+		<li>Flash</li>
+		<li>"Flicker" (Exile target creature/permanent, then return it to the battlefield under its owner's control&mdash;occasionally the creature/permanent returns at the end of the turn.)</li>
+		<li>Mana production, permanent</li>
+		<li>Protection</li>
+		<li>Putting creatures from hand onto the battlefield</li>
+		<li>Stealing permanents, permanently</li>
+		<li>Trample</li>
+		<li>"Tutor" for a land (Search your library for a land card and put that card in your hand.)</li>
+	</ul></div>
+	</dd>
+</dl></div>
+
+<div class="collapsibleBlock">
+<dl class="showHideListItems" style="border: 1px solid black;"><dt>
+	<h2>Red&mdash;Primary</h2>
+	</dt>
+	<dd>
+	<div class="wrapper">
+	<div>
+	<p class="rtecenter"><img alt="" src="http://media.wizards.com/2017/images/daily/MM20170605_Ra.png"></p>
+
+	<ul><li>Basic land counting (Doing an effect equal to the number of basic lands of a certain type you control.)</li>
+		<li>Can't be countered</li>
+		<li>Copying permanents, temporarily</li>
+		<li>+N/+0 (on creatures)</li>
+		<li>+N/+0 (on spells)</li>
+		<li>+N/+0 (on Auras)</li>
+		<li>+N/+0 to your team, one-shot</li>
+		<li>+N/+0 to your team, ongoing</li>
+		<li>Deal N damage to creature and/or player</li>
+		<li>Deal N damage to a creature that's been damaged this turn</li>
+		<li>Sacrifice a creature and deal damage to creature/player equal to the sacrificed creature's power/toughness</li>
+		<li>Deal N damage to a creature/player where N is the number of cards in your hand/your opponent's hand</li>
+		<li>Direct damage, multiple targets</li>
+		<li>Double Strike</li>
+		<li>Extra attack (Untap all creatures that attacked this turn. After this main phase, there is an additional combat phase followed by an additional main phase.)</li>
+		<li>First strike</li>
+		<li>Forced attack (Target creature attacks this turn if able.)</li>
+		<li>Forced block (Target creature must block this turn.)</li>
+		<li>"Freeze" land (Tap target land. That land doesn't untap during its controller's next untap step.)</li>
+		<li>Haste</li>
+		<li>"Impulsive draw" (Exile the top N cards of your library. Until end of turn, you may play cards exiled this way.)</li>
+		<li>Land destruction</li>
+		<li>Mana production, temporary</li>
+		<li>Menace</li>
+		<li>Must attack</li>
+		<li>"Panic" (Target creature can't block this turn.)</li>
+		<li>Playing cards off top of library, for free</li>
+		<li>"Polymorph" (Exile target creature. Its controller reveals cards from the top of his or her library until he or she reveals a creature card. That player puts the revealed card onto the battlefield.)</li>
+		<li>"Punisher" effects (Opponent chooses one: thing X happens or thing Y happens.)</li>
+		<li>Random destruction effects (Destruction where the outcome is unknown at the time of casting.)</li>
+		<li>Return target sorcery from graveyard to hand</li>
+		<li>"Rummaging" (Discard a card and draw a card.)</li>
+		<li>Sacrifice an artifact (Target/all player(s) sacrifice an artifact.)</li>
+		<li>Sacrifice a permanent (Target/all player(s) sacrifice a permanent.)</li>
+		<li>Spell Copying (Copy target instant or sorcery spell. You may choose new targets for the copy.)</li>
+		<li>Spell redirection (Change the target of target spell with a single target.)</li>
+		<li>Stealing permanents, temporarily</li>
+		<li>"Wheeling" (All players discard their hand and draw N cards.)</li>
+	</ul></div>
+	</div>
+	</dd>
+</dl></div>
+
+<div class="collapsibleBlock">
+<dl class="showHideListItems" style="border: 1px solid black;"><dt>
+	<h2>Red&mdash;Secondary</h2>
+	</dt>
+	<dd>
+	<div class="wrapper">
+	<div>
+	<p class="rtecenter"><img alt="" src="http://media.wizards.com/2017/images/daily/MM20170605_Rb.png"></p>
+
+	<ul><li>Animating lands (Target land becomes an N/N creature until end of turn.)</li>
+		<li>"Bounce" (Return target creature/permanent to its owner's hand.)</li>
+		<li>Can't block</li>
+		<li>Card draw</li>
+		<li>Cast spells out of graveyard</li>
+		<li>+N/+N (on Auras)</li>
+		<li>+N/-N (on creatures)</li>
+		<li>+N/-N (on Auras)</li>
+		<li>Defender</li>
+		<li>Deal N damage to a creature with flying</li>
+		<li>Fight</li>
+		<li>Fight, one-sided (Target creature deals damage to equal to its power to another target creature.)</li>
+		<li>Flying</li>
+		<li>Friendly to instants and sorceries</li>
+		<li>Friendly to lands</li>
+		<li>"Khab&aacute;l" ability (Whenever another creature dies, put a +1/+1 counter on this creature.)</li>
+		<li>"Lure," limited (This creature must be blocked this turn if able.)</li>
+		<li>Prowess</li>
+		<li>Putting creatures from hand onto the battlefield</li>
+		<li>Reach</li>
+		<li>"Reanimation" (Return a creature card from a graveyard to the battlefield.)</li>
+		<li>Return target instant from graveyard to hand</li>
+		<li>Rules setting</li>
+		<li>Scry</li>
+		<li>Switching power/toughness</li>
+		<li>Token generation</li>
+		<li>Trample</li>
+		<li>"Tutor" for a creature (Search your library for a creature card and put that card in your hand.)</li>
+	</ul></div>
+	</div>
+	</dd>
+</dl></div>
+
+<div class="collapsibleBlock">
+<dl class="showHideListItems" style="border: 1px solid black;"><dt>
+	<h2>Red&mdash;Tertiary</h2>
+	</dt>
+	<dd>
+	<div class="wrapper">
+	<p class="rtecenter"><img alt="" src="http://media.wizards.com/2017/images/daily/MM20170605_Rc.png"></p>
+
+	<ul><li>-N/-N (on spells)</li>
+		<li>+N/+N to your team, ongoing</li>
+		<li>Flash</li>
+		<li>Indestructible</li>
+		<li>"Lhurgoyf" (This creature's power and toughness are equal to the number of cards in your/all graveyards.)</li>
+		<li>"Manipulate time" (End the turn.)</li>
+		<li>Protection</li>
+		<li>"Time Walk" (Take an extra turn after this one.)</li>
+		<li>"Tutor" for a land (Search your library for a land card and put that card in your hand.)</li>
+	</ul></div>
+	</dd>
+</dl></div>
+
+<div class="collapsibleBlock">
+<dl class="showHideListItems" style="border: 1px solid black;"><dt>
+	<h2>Green&mdash;Primary</h2>
+	</dt>
+	<dd>
+	<div class="wrapper">
+	<div>
+	<p class="rtecenter"><img alt="" src="http://media.wizards.com/2017/images/daily/MM20170605_Ga.png"></p>
+
+	<ul><li>Animating lands (Target land becomes an N/N creature until end of turn.)</li>
+		<li>Basic land counting (Doing an effect equal to the number of basic lands of a certain type you control.)</li>
+		<li>Blocking extra creatures (This creature can block an additional N creatures each combat.)</li>
+		<li>Can't be countered</li>
+		<li>Destroy target creature with flying</li>
+		<li>+N/+N (on creatures, single use)</li>
+		<li>+N/+N (on spells)</li>
+		<li>+N/+N (on Auras)</li>
+		<li>"Creatureball" (This creature enters the battlefield with X +1/+1 counters.)</li>
+		<li>"Daunt" (This creature can't be blocked by creatures with power 2 or less.)</li>
+		<li>Deal N damage to a creature with flying</li>
+		<li>Enchantment destruction</li>
+		<li>Fight</li>
+		<li>Fight, one-sided (Target creature deals damage to equal to its power to another target creature.)</li>
+		<li>"Fog" (Prevent all combat damage that would be dealt this turn.)</li>
+		<li>Friendly to creatures</li>
+		<li>Friendly to lands</li>
+		<li>Increasing counters and/or tokens</li>
+		<li>"Lhurgoyf" (This creature's power and toughness are equal to the number of cards in your/all graveyards.)</li>
+		<li>Life gain</li>
+		<li>"Lure" (All creatures able to block this creature must do so.)</li>
+		<li>"Lure," Limited (This creature must be blocked this turn if able.)</li>
+		<li>Mana production, permanent</li>
+		<li>"Maro" ability (This creature's power and toughness are equal to the number of cards in our hand.)</li>
+		<li>Putting cards from hand onto the battlefield</li>
+		<li>Putting creatures from hand onto the battlefield</li>
+		<li>Putting lands from hand onto the battlefield</li>
+		<li>Reach</li>
+		<li>"Restocking" (Putting cards from graveyard back into your library.)</li>
+		<li>Return target card from graveyard to hand</li>
+		<li>Return target land from graveyard to hand</li>
+		<li>"Stalking" (This creature can't be blocked by more than one creature.)</li>
+		<li>"Super trample" (You may have this creature assign combat damage as though it weren't blocked.)</li>
+		<li>Token generation</li>
+		<li>Trample</li>
+		<li>"Tutor" for a creature (Search your library for a creature card and put that card in your hand.)</li>
+		<li>"Tutor" for a land (Search your library for a land card and put that card in your hand.)</li>
+		<li>Untapping creatures</li>
+		<li>Untapping lands</li>
+	</ul></div>
+	</div>
+	</dd>
+</dl></div>
+
+<div class="collapsibleBlock">
+<dl class="showHideListItems" style="border: 1px solid black;"><dt>
+	<h2>Green&mdash;Secondary</h2>
+	</dt>
+	<dd>
+	<div class="wrapper">
+	<p class="rtecenter"><img alt="" src="http://media.wizards.com/2017/images/daily/MM20170605_Gb.png"></p>
+
+	<ul><li>Banisher Priest&ndash;like effect (When this card enters the battlefield, exile target creature/permanent until this card leaves play.)</li>
+		<li>Can't be attacked (Creatures can't attack you.)</li>
+		<li>Card draw</li>
+		<li>Card filtering (Look at the top N cards of your library and put N in your hand and put the rest on the bottom of the library in any order.)</li>
+		<li>Color changing (Target/this creature becomes the color(s) of your choice until end of turn.)</li>
+		<li>Counter target activated/triggered ability</li>
+		<li>+N/+N (on creatures)</li>
+		<li>+N/+0 (on creatures)</li>
+		<li>+N/+N to your team, one-shot</li>
+		<li>+N/+N to your team, ongoing</li>
+		<li>"Curiosity" (Whenever this creature deals combat damage to an opponent, draw a card.)</li>
+		<li>Deathtouch</li>
+		<li>Defender</li>
+		<li>"Enchantress" ability (Whenever you play an enchantment, draw a card.)</li>
+		<li>Flash</li>
+		<li>Forced block (Target creature must block this turn.)</li>
+		<li>Friendly to enchantments</li>
+		<li>Hexproof</li>
+		<li>Indestructible</li>
+		<li>Land destruction</li>
+		<li>Playing cards off top of library, at cost</li>
+		<li>Putting enchantments from hand onto the battlefield</li>
+		<li>"Reanimation" (Return a creature card from a graveyard to the battlefield.)</li>
+		<li>Rules setting</li>
+		<li>Scry</li>
+		<li>Vigilance</li>
+		<li>"Warlord" (This creature's power and toughness is equal to the number of creatures you control.)</li>
+	</ul></div>
+	</dd>
+</dl></div>
+
+<div class="collapsibleBlock">
+<dl class="showHideListItems" style="border: 1px solid black;"><dt>
+	<h2>Green&mdash;Tertiary</h2>
+	</dt>
+	<dd>
+	<div class="wrapper">
+	<div>
+	<p class="rtecenter"><img alt="" src="http://media.wizards.com/2017/images/daily/MM20170605_Gc.png"></p>
+
+	<ul><li>+N/+0 (on Auras)</li>
+		<li>-N/-N (on spells)</li>
+		<li>Flying</li>
+		<li>Haste</li>
+		<li>Protection</li>
+	</ul></div>
+	</div>
+	</dd>
+</dl></div>
+
+<p><br>
+Now here are all the abilities listed in alphabetical order. I've included a greater explanation of the limitations of each ability as well as which colors it can appear in, so you can see how the colors share abilities.</p>
+
+<div class="collapsibleBlock">
+<dl class="showHideListItems" style="border: 1px solid black;"><dt>
+	<h2>A&ndash;E</h2>
+	</dt>
+	<dd>
+	<div class="wrapper">
+	<div>
+	<p><strong>"Abyss" (All players/opponents must sacrifice a creature each turn.)</strong></p>
+
+	<p>Primary: black</p>
+
+	<p>Sometimes black likes killing things slowly.</p>
+
+	<hr><p><strong>Animating lands (Target land becomes an N/N creature until end of turn.)</strong></p>
+
+	<p>Primary: green<br>
+	Secondary: red<br>
+	Tertiary: white, blue, and black</p>
+
+	<p>Green, as the color connected most closely to lands and creatures, is the color most likely to turn lands into creatures&mdash;usually still keeping them lands. When we do this, we often grant the land haste to avoid having to worry if it was the one you played this turn (which would have summoning sickness). Note that's a special exception for land, as green does not often grant creatures haste. Red uses this ability a little playing into its one-shot damage cards that come through attacking. All the colors have dipped their toe into this area, but it's infrequent and usually only involves animating their own basic land type.</p>
+
+	<hr><p><strong>Artifact destruction</strong></p>
+
+	<p>Primary: red and green<br>
+	Secondary: white</p>
+
+	<p>Red and Green usually have one artifact destruction card in common, although green's is usually also a spell that destroy both artifacts and enchantments. (See <strong>enchantment destruction</strong>.) White's artifact destruction is usually at uncommon.</p>
+
+	<hr><p><strong>Banisher Priest&ndash;like effect (When this card enters the battlefield, exile target creature/permanent until this card leaves play.)</strong></p>
+
+	<p>Primary: white<br>
+	Secondary: blue and green</p>
+
+	<p>This is one of white's most efficient answers, especially in Limited. It is usually used on creatures but sometimes hits other permanents. The effect is always on a permanent, usually a creature or enchantment. We've used this effect in blue and green as an enters-the-battlefield trigger with the flavor that it's "eaten" the creature.</p>
+
+	<hr><p><strong>Basic land counting (Doing an effect equal to the number of basic lands of a certain type you control.)</strong></p>
+
+	<p>Primary: black, red, and green<br>
+	Secondary: blue<br>
+	Tertiary: white</p>
+
+	<p>All colors have access to this, but we tend to skew toward black, red, and green.</p>
+
+	<hr><p><strong>Blocking extra creatures (This creature can block an additional N creatures each combat.)</strong></p>
+
+	<p>Primary: white and Green</p>
+
+	<p>This ability used to be solely in white, but we added it to green because we felt green needed it for gameplay reasons. It's possible that as we do this more in green, we'll start doing it less in white.</p>
+
+	<hr><p><strong>"Bounce" (Return target creature/permanent to its owner's hand.)</strong></p>
+
+	<p>Primary: blue<br>
+	Secondary: white and green</p>
+
+	<p>Blue can bounce any type of permanent, although these days doesn't often bounce lands. It also will often bounce a creature via an enters-the-battlefield effect. (R&amp;D refers to these as "<a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=413601" class="autocard-link" data-image-url="http://gatherer.wizards.com/Handlers/Image.ashx?type=card&amp;multiverseid=413601">Man-o'-War</a>s," based on the first card that did it.) White can only bounce its own permanents to protect them (and often to do cool combo-ish things). Green bounces creatures as a cost for playing bigger creatures, often as an upkeep cost.</p>
+
+	<hr><p><strong>"Bounce" to library (Put a creature/permanent on top of its owner's library or some number of cards down.)</strong></p>
+
+	<p>Primary: blue<br>
+	Secondary: white</p>
+
+	<p>Blue does this as a super unsummoning, while white tends to do it flavored as a delaying tactic.</p>
+
+	<hr><p><strong>Bring back creatures/permanents that went to the graveyard this turn</strong></p>
+
+	<p>Primary: white</p>
+
+	<p>White, the color of mercy, is the color that saves things the turn they are destroyed.</p>
+
+	<hr><p><strong>Can't be attacked (Creatures can't attack you.)</strong></p>
+
+	<p>Primary: white<br>
+	Secondary: green</p>
+
+	<p>We don't do this often, but this effect keeps you from either being attacked for a turn or as long as a specific permanent is on the battlefield.</p>
+
+	<hr><p><strong>Can't be blocked</strong></p>
+
+	<p>Primary: blue</p>
+
+	<p>We tried to keyword this ability only to discover that there are so many variations on it that we couldn't. Instead we changed from "unblockable" to "can't be blocked" to avoid players thinking it was a keyword. (It matters occasionally.) Blue both has creatures with this ability and grants it through spells and Auras.</p>
+
+	<hr><p><strong>Can't be countered</strong></p>
+
+	<p>Primary: red and green<br>
+	Secondary: blue</p>
+
+	<p>Red tends to have spells that can't be countered while green tends to have creatures that can't be countered. When blue does "can't be countered," which is less often, it's usually a more control-oriented card.</p>
+
+	<hr><p><strong>Can't block</strong></p>
+
+	<p>Primary: black<br>
+	Secondary: red</p>
+
+	<p>For a long time we separated black from red by making black have the "can't block" drawback on its creatures and red have the "must attack" drawback on its creatures. Time has shown that the "can't block" drawback leads to better gameplay, so we've started letting red get it from time to time.</p>
+
+	<hr><p><strong>Card draw</strong></p>
+
+	<p>Primary: blue<br>
+	Secondary: black and green<br>
+	Tertiary: white and red</p>
+
+	<p>Blue is the best at card drawing. It has the most of it and no restrictions. Black's card drawing must involve paying some other cost, most often life but sometimes sacrificing permanents. Green's card draw is usually tied to creatures but occasionally tied to land. White has a very narrow band of card drawing where it's focused on having to use a specific strategy (like say having a deck full of Equipment). All colors get cantrips (spells that draw you a single card). Red doesn't get any card advantage, with two exceptions&mdash;impulsive draw and wheeling. (See <strong>impulsive draw </strong>and <strong>wheeling</strong>)</p>
+
+	<hr><p><strong>Card filtering (Look at the top N cards of your library and put N in your hand and put the rest on the bottom of the library in any order.)</strong></p>
+
+	<p>Primary: blue<br>
+	Secondary: green</p>
+
+	<p>Blue is the color of information, so it loves having the ability to choose what exactly it gets to draw. Sometimes card filtering looks similar to looting, where you draw some number of cards and then discard a close number. When green does this, it can usually only get a subset of permanents into its hand.</p>
+
+	<hr><p><strong>Cast spells out of graveyard</strong></p>
+
+	<p>Primary: black<br>
+	Secondary: red</p>
+
+	<p>Black is the color most focused on the graveyard. We've let red play a little in this area, especially in sets where it can grant flashback to instants and sorceries in the graveyard.</p>
+
+	<hr><p><strong>Changing lands (Target land becomes the basic land of your choice.)</strong></p>
+
+	<p>Primary: blue</p>
+
+	<p>We don't do a lot of land changing these days, but the ability is still in blue in environments where we might need it. It allows blue a way to get access to other colors in multicolor environments.</p>
+
+	<hr><p><strong>Color changing (Target/this creature becomes the color(s) of your choice until end of turn.)</strong></p>
+
+	<p>Primary: blue<br>
+	Secondary: green<br>
+	Tertiary: white and black</p>
+
+	<p>Blue can change any creature's color, including its own. Green has this ability on creatures that can change themselves, usually flavored as a chameleon-like effect. White and black have had the ability on rare occasion to make things their own color. As we've lessened the number of effects that care about color, this ability isn't used much these days.</p>
+
+	<hr><p><strong>Copying permanents, permanently</strong></p>
+
+	<p>Primary: blue</p>
+
+	<p>Blue has permanents that will choose a target and then remain that target for the rest of the game (or until the permanent chooses to copy a new target).</p>
+
+	<hr><p><strong>Copying permanents, temporarily</strong></p>
+
+	<p>Primary: red<br>
+	Secondary: blue</p>
+
+	<p>Red has permanents (or spells that create this effect) that can temporarily become another creature, usually until end of turn. Blue's cards in this category are cards that change but don't let the controller explicitly choose what they become. (For instance, one might copy the last creature played.)</p>
+
+	<hr><p><strong>Counterspell</strong></p>
+
+	<p>Primary: blue<br>
+	Tertiary: white</p>
+
+	<p>Counterspelling is one of the few abilities that's almost universally used in a single color. White dips its toe into the ability with taxing and delay-style counterspells.</p>
+
+	<hr><p><strong>Counter target activated/triggered ability</strong></p>
+
+	<p>Primary: blue<br>
+	Secondary: green</p>
+
+	<p>For a while this was a green effect, but we've moved it to be more in blue.</p>
+
+	<hr><p><strong>Creature destruction, single creature</strong></p>
+
+	<ul><li><strong>Destroy target creature</strong></li>
+	</ul><p>Primary: black</p>
+
+	<p>Black is king of creature destruction and is the one color that can kill regardless of circumstance.</p>
+
+	<ul><li><strong>Destroy target attacking or blocking creature</strong></li>
+	</ul><p>Primary: white</p>
+
+	<p>White tends to do its creature destruction in one of four ways: white can kill during combat, it sometimes will just hit attackers or just hit blockers, or white will often exile creatures instead of destroying then.</p>
+
+	<ul><li><strong>Destroy target creature that damaged you or a creature you control this turn</strong></li>
+	</ul><p>Primary: white</p>
+
+	<p>White is also willing to destroy something after it has hurt white in some way.</p>
+
+	<ul><li><strong>Destroy target tapped creature</strong></li>
+	</ul><p>Primary: white<br>
+	Secondary: black</p>
+
+	<p>White can also destroyed tapped creatures using a similar flavor to destroying creatures that have harmed it.</p>
+
+	<ul><li><strong>Destroy target creature with power 4 or greater</strong></li>
+	</ul><p>Primary: white</p>
+
+	<p>As champion of the little guy, white will also destroy large creatures.</p>
+
+	<ul><li><strong>Destroy target creature with flying</strong></li>
+	</ul><p>Primary: green</p>
+
+	<p>Green is allowed to kill only two types of creatures&mdash;flying creatures (as it is the anti-flying color) and artifact creatures (see <strong>artifact destruction</strong>).</p>
+
+	<hr><p><strong>Creature destruction, mass creature</strong></p>
+
+	<ul><li><strong>Destroy all creatures</strong></li>
+	</ul><p>Primary: white<br>
+	Secondary: black</p>
+
+	<p>White is the color that most often does mass creature kill, with it showing up on a rare or mythic rare in almost every set. Black mass-creature kill is not quite as frequent. Red has a similar effect where it does large amount of damage to all creatures (see <strong>direct damage</strong>).</p>
+
+	<ul><li><strong>Destroy all creatures controlled by one player</strong></li>
+	</ul><p>Primary: black</p>
+
+	<p>White believes in balance and parity, so only black will kill just one player's creatures.</p>
+
+	<ul><li><strong>Destroy all creatures with power 4 or greater</strong></li>
+	</ul><p>Primary: white</p>
+
+	<p>Killing big creatures is a white thing so it can be combined with mass creature kill. The number is most often 4 power, but occasionally can be tweaked slightly up or down.</p>
+
+	<hr><p><strong>Creature pumping</strong></p>
+
+	<ul><li><strong>+N/+N (on creatures) </strong></li>
+	</ul><p>Primary: black</p>
+
+	<p>Secondary: green</p>
+
+	<p>For black this is mostly seen on Shades and usually requires black mana. Green gets unlimited pumping activations but usually only when the activation cost is high enough that multiple activations don't happen until the late game.</p>
+
+	<ul><li><strong>+N/+N (on creatures, single use)</strong></li>
+	</ul><p>Primary: green</p>
+
+	<p>This is what we refer to as the <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=Rootwalla" class="autocard-link" data-image-url="http://gatherer.wizards.com/Handlers/Image.ashx?type=card&amp;name=Rootwalla">Rootwalla</a> ability. It's trying to simulate a built-in <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=Giant+Growth" class="autocard-link" data-image-url="http://gatherer.wizards.com/Handlers/Image.ashx?type=card&amp;name=Giant+Growth">Giant Growth</a>. It's almost always exclusive to green.</p>
+
+	<ul><li><strong>+N/+N (on spells)</strong></li>
+	</ul><p>Primary: white and green<br>
+	Secondary: black</p>
+
+	<p>The most common use of this is on Giant Growth&ndash;like effects in green, usually +3/+3 but it can vary a little. White's pumping is usually +2/+2 or smaller, but it most often will grant an ability as well. The one exception for white is that it can get larger pumps if restricted to blockers. Black will occasionally get smaller buffs, usually with an ability added. All three colors default in this ability to being on instants.</p>
+
+	<ul><li><strong>+N/+N (on Auras)</strong></li>
+	</ul><p>Primary: white and green<br>
+	Secondary: blue, black, and red</p>
+
+	<p>All colors have access to Auras that grant +N/+N. Blue usually doesn't do much more than +1/+1. White, black, and red tend to top out at +2/+2. Green is the one color that regularly grants +3/+3 and above on Auras.</p>
+
+	<ul><li><strong>+N/+0 (on creatures) </strong></li>
+	</ul><p>Primary: red<br>
+	Secondary: white and green</p>
+
+	<p>This ability, as a repeatable activation, is what we refer to as "firebreathing." It's most often seen on red creatures. White tends to get one-time upgrades of usually +1/+0. Green gets +N/+0 when it's not intended for it to survive the fight.</p>
+
+	<ul><li><strong>+N/+0 (on spells) </strong></li>
+	</ul><p>Primary: black and red<br>
+	Secondary: white</p>
+
+	<p>Black and red are the two colors that tend to pump power as a spell without also pumping toughness. White does it occasionally as a combat trick but usually never more than +1/+0.</p>
+
+	<ul><li><strong>+N/+0 (on Auras) </strong></li>
+	</ul><p>Primary: red<br>
+	Secondary: white and black<br>
+	Tertiary: blue and green</p>
+
+	<p>Red is the color most often to have just power-pumping Auras (including "firebreathing" Auras). White and black do it occasionally with white tending to go no higher than +2/+0. Blue and green do it on rare occasion with blue, like white, sticking at +2/+0 or lower.</p>
+
+	<ul><li><strong>+N/-N (on creatures) </strong></li>
+	</ul><p>Primary: blue<br>
+	Secondary: black and red</p>
+
+	<p>Blue tends to use this mostly on Elementals and Shapeshifters, flavored as shape-changing. Black and red use this on occasion to play up their reckless side.</p>
+
+	<ul><li><strong>+N/-N (on spells) </strong></li>
+	</ul><p>Primary: black</p>
+
+	<p>As this is mostly used as a kill spell, the ability resides mostly in black.</p>
+
+	<ul><li><strong>+N/-N (on Auras) </strong></li>
+	</ul><p>Primary: black<br>
+	Secondary: red<br>
+	Tertiary: blue</p>
+
+	<p>These tend to be flavored as "push your luck" cards that can double as creature kill. Black will go up to -3 on the toughness, whereas red tends to stop at -2. Blue will do a "make me a shapeshifter" flavored Aura from time to time.</p>
+
+	<ul><li><strong>-N/+N (on creatures) </strong></li>
+	</ul><p>Primary: blue<br>
+	Tertiary white</p>
+
+	<p>This is also used in blue on Elementals and Shapeshifters, often on the same cards with the +N/-N. White, on rare occasion, will have an activation that uses this defensively.</p>
+
+	<ul><li><strong>-N/-N (on creatures) </strong></li>
+	</ul><p>Primary: black</p>
+
+	<p>On creatures, this effect is used almost exclusively by creatures on other creatures, and almost exclusively in black.</p>
+
+	<ul><li><strong>-N/-N (on spells) </strong></li>
+	</ul><p>Primary: black</p>
+
+	<p>Tertiary: white, blue, red, and green</p>
+
+	<p>Black is the only color to do -N/-N abilities on spells. Other colors do put -1/-1 counters on creatures, usually in place of spots where they would do damage in sets with -1/-1 counters.</p>
+
+	<ul><li><strong>-N/-N (on Auras) </strong></li>
+	</ul><p>Primary: black</p>
+
+	<p>This is an area only black tends to go, used almost exclusively on the opponent's creatures. This ability will occasionally be paired with a positive ability, making it a card you might play on your own creature.</p>
+
+	<ul><li><strong>-N/+N (on spells) </strong></li>
+	</ul><p>Primary: white</p>
+
+	<p>We almost never make this type of spell, but white would be the recipient if we did.</p>
+
+	<ul><li><strong>-N/+N (on Auras) </strong></li>
+	</ul><p>Primary: white</p>
+
+	<p>This is another area in which we almost never make cards.</p>
+
+	<ul><li><strong>-N/-0 (on creatures) </strong></li>
+	</ul><p>Primary: blue</p>
+
+	<p>There's no reason to do this on your own creature. If we're going to let you lower a creature's power, we will let you raise its toughness accordingly. We do occasionally make a creature that lets you activate to do this targetting an opponent's creature. This ties into the "shrink" flavor seen on the spells.</p>
+
+	<ul><li><strong>-N/-0 (on spells) </strong></li>
+	</ul><p>Primary: blue<br>
+	Secondary: black</p>
+
+	<p>In blue, this is shrinking its target. In black it's usually some form of torture.</p>
+
+	<ul><li><strong>-N/-0 (on Auras) </strong></li>
+	</ul><p>Primary: blue<br>
+	Secondary: black</p>
+
+	<p>We tend to treat the Auras similarly to how we treat the spells.</p>
+
+	<ul><li><strong>+0/+N (on creatures) </strong></li>
+	</ul><p>Primary: white</p>
+
+	<p>White used to do this quite a bit, but we've backed off because it tends to just clog up the board.</p>
+
+	<ul><li><strong>+0/+N (on spells) </strong></li>
+	</ul><p>Primary: white</p>
+
+	<p>Once again, white used to do this more often, but these days we'll boost power some if we're going to boost toughness.</p>
+
+	<ul><li><strong>+0/+N (on Auras) </strong></li>
+	</ul><p>Primary: white</p>
+
+	<p>Secondary: blue</p>
+
+	<p>This is also isn't done often, but when it is used, it's used on the two most defensive colors.</p>
+
+	<hr><p><strong>Creature pumping, your team, one-shot</strong></p>
+
+	<ul><li><strong>+N/+N to your team</strong></li>
+	</ul><p>Primary: white<br>
+	Secondary: green</p>
+
+	<p>White is the color most likely to pump its team, most often with +1/+1, but it will occasionally go up to +2/+2. Green's team pump starts at +3/+3 and often also adds trample.</p>
+
+	<ul><li><strong>+N/+0 to your team</strong></li>
+	</ul><p>Primary: red</p>
+
+	<p>Team pump that only pumps power is most often done in red, usually affecting attacking creatures.</p>
+
+	<ul><li><strong>+0/+N to your team</strong></li>
+	</ul><p>Primary: white</p>
+
+	<p>We don't do many of these types of spells any more, but they belong in white.</p>
+
+	<hr><p><strong>Creature Pumping, their team, one-shot</strong></p>
+
+	<ul><li><strong>-N/-N to their team</strong></li>
+	</ul><p>Primary: black</p>
+
+	<p>This is a common way for black to kill creatures. Sometimes this effect will affect all creatures and not just your opponents.</p>
+
+	<ul><li><strong>-N/-0 to their team</strong></li>
+	</ul><p>Primary: blue</p>
+
+	<p>Just as blue can "shrink" a single creature, so too can it "shrink" an entire team.</p>
+
+	<ul><li><strong>-0/-N to their team</strong></li>
+	</ul><p>Primary: black</p>
+
+	<p>This is not an effect we do often.</p>
+
+	<hr><p><strong>Creature pumping, your team, ongoing</strong></p>
+
+	<ul><li><strong>+N/+N to your team</strong></li>
+	</ul><p>Primary: white<br>
+	Secondary: green<br>
+	Tertiary: blue, black, and red</p>
+
+	<p>This category appears mostly on permanents, most often creatures or enchantments, and it grants a stat boost to your team. This ability is most often seen in white with just a +1/+1 boost. Green boosts are often a bit bigger. All the colors have access to this ability when making tribal lords (creatures that grant a certain creature type or types a +1/+1 bonus). This stat bonus often comes with the granting of another ability.</p>
+
+	<ul><li><strong>+N/+0 to your team</strong></li>
+	</ul><p>Primary: red<br>
+	Tertiary: black</p>
+
+	<p>When red does permanent pumps, it is usually just pumping the power. Often it pumps your creatures just on attack.</p>
+
+	<ul><li><strong>+0/+N to your team</strong></li>
+	</ul><p>Primary: white</p>
+
+	<p>We don't do this style of effect often any more because it tends to gum up board states, but it's white when we do it.</p>
+
+	<hr><p><strong>Creature pumping, their team, ongoing</strong></p>
+
+	<ul><li><strong>-N/-N to their team</strong></li>
+	</ul><p>Primary: black</p>
+
+	<p>Black occasionally lowers the opponent's creatures' power and toughness, usually by just -1/-1.</p>
+
+	<hr><p><strong>"Creatureball" (This creature enters the battlefield with X +1/+1 counters.)</strong></p>
+
+	<p>Primary: Green</p>
+
+	<p>This is a creature with an X in its cost determining how big it's going to be.</p>
+
+	<hr><p><strong>"Curiosity" (Whenever this creature deals combat damage to an opponent, draw a card.)</strong></p>
+
+	<p>Primary: blue<br>
+	Secondary: green</p>
+
+	<p>This ability started as a blue-only ability, but we added it in green because it works with green's creature-tied card drawing.</p>
+
+	<hr><p><strong>Damage prevention (Prevent the next N damage that would be dealt to target creature/player.)</strong></p>
+
+	<p>Primary: white</p>
+
+	<p>We don't do a lot of this effect any more, but when we do it's almost always in white.</p>
+
+	<hr><p><strong>Damage redirection (Prevent the next N damage that would be dealt to target creature/player this turn. If damage is prevented in this way, this card deals that much damage to target creature/player.)</strong></p>
+
+	<p>Primary: white</p>
+
+	<p>This is another effect we've cut significantly back on that is also squarely in white.</p>
+
+	<hr><p><strong>"Daunt" (This creature can't be blocked by creatures with power 2 or less.)</strong></p>
+
+	<p>Primary: green</p>
+
+	<p>This is an ability we've been trying out in small doses in green. I don't know if it will ever make it to evergreen status, but it's a possibility.</p>
+
+	<hr><p><strong>Deathtouch</strong></p>
+
+	<p>Primary: black<br>
+	Secondary: green</p>
+
+	<p>This ability was primary in both black and green for a while, but we found that black both had more need for it and had more flavorful ways to express it creatively.</p>
+
+	<hr><p><strong>Defender</strong></p>
+
+	<p>Primary: white<br>
+	Secondary; blue, black, red, and green</p>
+
+	<p>Basically everyone can have defender, but it leans toward white philosophically as it's the most defensive color.</p>
+
+	<hr><p><strong>"Devil's Deal" permanents (Cards that grant you power but at a cost.)</strong></p>
+
+	<p>Primary: black</p>
+
+	<p>Black is the color of "power at any cost," so it gets permanents (usually) that start helping you but have the potential to hurt you in the end. These are most often creatures or enchantments, but occasionally show up in other forms.</p>
+
+	<hr><p><strong>Direct damage, single target</strong></p>
+
+	<ul><li><strong>Deal N damage to creature and/or player</strong></li>
+	</ul><p>Primary: red<br>
+	Secondary: black</p>
+
+	<p>Red is king of direct damage and has it in many forms, including the most straightforward versions. Black will do direct damage to creatures or players and then gain life. (See <strong>drain life</strong>) Black will sometimes deal damage to players as a punishment. Black use to mostly do life loss to players, but as we've been trying to give black more answers to planeswalkers, we've been shifting this more into damage.</p>
+
+	<ul><li><strong>Deal N damage to a creature that's been damaged this turn</strong></li>
+	</ul><p>Primary: red<br>
+	Secondary: black</p>
+
+	<p>Black and red are the colors that prey on the weak.</p>
+
+	<ul><li><strong>Sacrifice a creature and deal damage to creature/player equal to the sacrificed creature's power/toughness</strong></li>
+	</ul><p>Primary: red<br>
+	Secondary: black</p>
+
+	<p>In red, this is flavored as throwing the creatures. In black, it's more treated as a sacrifice for a ritual.</p>
+
+	<ul><li><strong>Deal N damage to a creature/player where N is the number of cards in your hand/your opponent's hand</strong></li>
+	</ul><p>Primary: red</p>
+
+	<p>We tend to do this in sets when red has a more spell-based theme.</p>
+
+	<ul><li><strong>Deal N damage to target attacking or blocking creature</strong></li>
+	</ul><p>Primary: white</p>
+
+	<p>White's direct damage only shows up in combat.</p>
+
+	<ul><li><strong>Deal N damage to a creature with flying</strong></li>
+	</ul><p>Primary: green<br>
+	Tertiary: red</p>
+
+	<p>As the two anti-flying colors, red and green will deal damage to fliers. Green does it significantly more than red, as any of red's direct damage to creatures can hit fliers.</p>
+
+	<hr><p><strong>Direct damage, multiple targets</strong></p>
+
+	<p>Primary: red<br>
+	Secondary: white</p>
+
+	<p>Red will deal damage to all or a subset of creatures, sometimes dealing a small amount (1 or 2 damage, killing small creatures), sometimes doing larger amounts that kill most creatures. Red's damage in this area most often hits all creatures, including its own. White will occasionally deal damage to multiple creatures or all attackers or blockers.</p>
+
+	<hr><p><strong>Discard</strong></p>
+
+	<p>Primary: black</p>
+
+	<p>This is one of only a handful of major abilities to be contained to just one color. The closest a second color comes is blue, which occasionally gets targeted card filtering that can be used on the opponent.</p>
+
+	<hr><p><strong>Double strike</strong></p>
+
+	<p>Primary: white and red</p>
+
+	<p>White and red are also the primary colors for first strike. Black, which is tertiary in first strike, does not get double strike.</p>
+
+	<hr><p><strong>"Drain life" (Deal damage to a creature/player and gain life equal to that damage.)</strong></p>
+
+	<p>Primary: black<br>
+	Tertiary: white</p>
+
+	<p>Other colors will deal damage or gain life, but black is the color that does both at the same time. (Okay, technically, red and white together can do this too.) Black also will do triggered or activated effects that repeatedly drain the player, usually for 1. White has dipped its toe into this area in Orzhov sets (aka <em>Ravnica</em> sets).</p>
+
+	<hr><p><strong>Enchantment destruction</strong></p>
+
+	<p>Primary: white and green</p>
+
+	<p>White and green usually have one enchantment destruction card in common, although green's is usually also a spell that destroy both artifacts and enchantments. (See <strong>enchantment</strong> <strong>destruction</strong>)</p>
+
+	<hr><p><strong>"Enchantress" ability (Whenever you play an enchantment, draw a card.)</strong></p>
+
+	<p>Primary: white<br>
+	Secondary: green</p>
+
+	<p>This ability started in <em>Limited Edition (Alpha)</em> on <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=Verduran+Enchantress" class="autocard-link" data-image-url="http://gatherer.wizards.com/Handlers/Image.ashx?type=card&amp;name=Verduran+Enchantress">Verduran Enchantress</a>, a green card. It stayed in green for many years, but has drifted toward white as part of us experimenting with white draw in narrow deck themes. The ability has still done a bit in green.</p>
+
+	<hr><p><strong>Exiling cards from graveyard</strong></p>
+
+	<p>Primary: black<br>
+	Secondary: white</p>
+
+	<p>This effect is used to get rid of cards in a graveyard that might have an effect/usable activation cost. Black does it most often, but white occasionally does it in sets that need it.</p>
+
+	<hr><p><strong>Extra attack (Untap all creatures that attacked this turn. After this main phase, there is an additional combat phase followed by an additional main phase.)</strong></p>
+
+	<p>Primary: red<br>
+	Tertiary: white</p>
+
+	<p>Attacking twice has always been red's domain. Thematically, it makes sense that white might occasionally do this.</p>
+	</div>
+	</div>
+	</dd>
+</dl></div>
+
+<div class="collapsibleBlock">
+<dl class="showHideListItems" style="border: 1px solid black;"><dt>
+	<h2>F&ndash;L</h2>
+	</dt>
+	<dd>
+	<div class="wrapper">
+	<p><strong>Fight</strong></p>
+
+	<p>Primary: green<br>
+	Secondary: red</p>
+
+	<p>This is green's primary form of creature destruction. Red uses it occasionally but at a much lower volume.</p>
+
+	<hr><p><strong>Fight, one-sided (Target creature deals damage to equal to its power to another target creature.)</strong></p>
+
+	<p>Primary: green<br>
+	Secondary: red</p>
+
+	<p>This used to just be a red ability, but we realized that green needed it more as green's creature removal has to be tied to creatures and red had plenty of other direct damage spells. So red now does this less often.</p>
+
+	<hr><p><strong>First strike</strong></p>
+
+	<p>Primary: white and red<br>
+	Tertiary: black</p>
+
+	<p>White and red are the two cards with trained fighters (white has the army and red the creatures that have gotten good through constant impulsive fighting). Black is tertiary, and uses this these days almost exclusively on Knights.</p>
+
+	<hr><p><strong>Flash</strong></p>
+
+	<p>Primary: blue<br>
+	Secondary: green</p>
+
+	<p>Tertiary: white, black, and red</p>
+
+	<p>Everyone gets some access to flash. Blue gets it the most as it plays into the color's reactive play style. Green gets it as one of its versions of creature destruction. White, black, and red get flash when they functionally need it to get an effect to work, most often with reactive enters-the-battlefield effects.</p>
+
+	<hr><p><strong>"Flicker" (Exile target creature/permanent, then return it to the battlefield under its owner's control&mdash;occasionally the creature/permanent returns at the end of the turn.)</strong></p>
+
+	<p>Primary: white and blue<br>
+	Tertiary: black</p>
+
+	<p>This ability appears in both white and blue. Black occasionally messes around with this effect putting the creature in the graveyard instead of into exile.</p>
+
+	<hr><p><strong>Flying</strong></p>
+
+	<p>Primary: white and blue<br>
+	Secondary: black and red<br>
+	Tertiary: green</p>
+
+	<p>White and blue are the two main colors with flying. Blue gets the most fliers. White gets the most efficient small fliers. Blue more often grants flying, although white does it on occasion. Red's flying is mostly restricted to Dragons and Phoenixes with the occasional weak small fliers. Green's tertiary is almost a quaternary, in that it gets flying <em>very</em> infrequently.</p>
+
+	<hr><p><strong>"Fog" (Prevent all combat damage that would be dealt this turn.)</strong></p>
+
+	<p>Primary: green<br>
+	Tertiary: white</p>
+
+	<p>This effect has shown up in four of the five colors over the years. It started in green, spent numerous years bouncing around, ended up in white, and then finally got moved back to green where it has stayed.</p>
+
+	<hr><p><strong>Forced attack (Target creature attacks this turn if able.)</strong></p>
+
+	<p>Primary: red<br>
+	Secondary: blue</p>
+
+	<p>We don't use this ability a lot, but when we do, we use it in red and blue. Red is flavored as emotional tampering and blue as mind control.</p>
+
+	<hr><p><strong>Forced block (Target creature must block this turn.)</strong></p>
+
+	<p>Primary: red<br>
+	Secondary: green</p>
+
+	<p>We don't do this effect often, but red and green are the colors that can force creatures to block.</p>
+
+	<hr><p><strong>Forced sacrifice</strong></p>
+
+	<ul><li><strong>Sacrifice a creature (Target/all player(s) sacrifice a creature.)</strong></li>
+	</ul><p>Primary: black</p>
+
+	<p>Sometimes black kills your creatures and sometimes it makes you do it.</p>
+
+	<ul><li><strong>Sacrifice an artifact (Target/all player(s) sacrifice an artifact.)</strong></li>
+	</ul><p>Primary: red</p>
+
+	<p>Red can force you to sacrifice artifacts.</p>
+
+	<ul><li><strong>Sacrifice a permanent (Target/all player(s) sacrifice a permanent.)</strong></li>
+	</ul><p>Red can also force you to sacrifice permanents.</p>
+
+	<hr><p><strong>"Freeze" creature (Tap target creature. That creature doesn't untap during its controller's next untap step.)</strong></p>
+
+	<p>Primary: blue</p>
+
+	<p>This is a blue ability that R&amp;D has grown fond of in recent years.</p>
+
+	<hr><p><strong>"Freeze" land (Tap target land. That land doesn't untap during its controller's next untap step.)</strong></p>
+
+	<p>Primary: red</p>
+
+	<p>We've been experimenting with this in red as a "land destruction lite."</p>
+
+	<hr><p><strong>Friendly to a card type</strong></p>
+
+	<p>This can involve a wide range of things where you either help that card type (making it cheaper to cast, enhancing it in some way, using it to generate an effect, etc.) or that card type helps you (you get rewarded for playing that card type, having a certain number on the battlefield or in your hand or in the graveyard grants abilities, you can sacrifice them as a resource, etc.)</p>
+
+	<ul><li><strong>Friendly to artifacts</strong></li>
+	</ul><p>Primary: blue</p>
+
+	<p>Blue loves artifacts.</p>
+
+	<ul><li><strong>Friendly to creatures</strong></li>
+	</ul><p>Primary: green<br>
+	Secondary: white</p>
+
+	<p>Green and white are the main creature colors (they have the highest percentage of creatures versus spells) so they most often like you having creatures.</p>
+
+	<ul><li><strong>Friendly to enchantments</strong></li>
+	</ul><p>Primary: white<br>
+	Secondary: green</p>
+
+	<p>White and green are also the two colors that most appreciate enchantments.</p>
+
+	<ul><li><strong>Friendly to instants and sorceries</strong></li>
+	</ul><p>Primary: blue<br>
+	Secondary: red</p>
+
+	<p>The creature colors like creatures, the spell colors like instants and sorceries.</p>
+
+	<ul><li><strong>Friendly to lands</strong></li>
+	</ul><p>Primary: green<br>
+	Secondary: white, blue, black, and red</p>
+
+	<p>Green is the color that loves lands the most, but every color loves its own basic land type.</p>
+
+	<hr><p><strong>"Gaseous Form" (This creature neither deals nor receives damage.)</strong></p>
+
+	<p>Primary: white<br>
+	Secondary: blue</p>
+
+	<p>We don't do this effect much any more, but years back we moved it from blue to white (and in the very early days it showed up in green as a Fog variant). White will grant the ability to creatures, whereas blue tends to have the ability on creatures.</p>
+
+	<hr><p><strong>Haste</strong></p>
+
+	<p>Primary: red<br>
+	Secondary: black<br>
+	Tertiary: green</p>
+
+	<p>Haste is a weird case. Red is primary. Black is secondary, but mostly for numbers in Limited. Green is tertiary but is used by development for Constructed. So, there aren't a lot of green creatures with haste, but the ones that do have it tend to be good. This arrangement came about because design and development had different needs for haste in other colors; this was a compromise to make both groups happy.</p>
+
+	<hr><p><strong>Hexproof</strong></p>
+
+	<p>Primary: blue<br>
+	Secondary: green</p>
+
+	<p>Blue both has more creatures with hexproof and more often grants it as a pseudo-counterspell. Green tends to get hexproof on larger creatures without evasion.</p>
+
+	<hr><p><strong>"Illusion ability" (Sacrifice this creature if it is the target of a spell or ability.)</strong></p>
+
+	<p>Primary: blue</p>
+
+	<p>This ability started in black on Spirits and was known as "skulking," but has since been moved into blue and attached to Illusions.</p>
+
+	<hr><p><strong>"Impulsive draw" (Exile the top N cards of your library. Until end of turn, you may play cards exiled this way.)</strong></p>
+
+	<p>Primary: red</p>
+
+	<p>This is red's primary way of card drawing, playing into red's impulsive nature of wanting to do things now.</p>
+
+	<hr><p><strong>Increasing counters and/or tokens</strong></p>
+
+	<p>Primary: blue and green<br>
+	Secondary: white</p>
+
+	<p>This effect either makes more counters or tokens as they're being made or makes more after they've already been made. Sometimes this is one for one, sometimes it just adds one or two more. Blue and green do it most often, but we've started letting white in on the fun.</p>
+
+	<hr><p><strong>Indestructible</strong></p>
+
+	<p>Primary: white<br>
+	Secondary: black and green<br>
+	Tertiary: blue and red</p>
+
+	<p>White, and to a lesser extent green, tend to have creature that naturally have indestructible. Black and green, as the replacement for regeneration, often have activated abilities that grant indestructible until end of turn. White will at times use temporary indestructibility where it used to use protection. We allow all colors access to it when we do things like cycles of Gods.</p>
+
+	<hr><p><strong>"Khab&aacute;l" Ability (Whenever another creature dies, put a +1/+1 counter on this creature.)</strong></p>
+
+	<p>Primary: black<br>
+	Secondary: red</p>
+
+	<p>This ability is nicknamed after the first creature to have it: <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=159764" class="autocard-link" data-image-url="http://gatherer.wizards.com/Handlers/Image.ashx?type=card&amp;multiverseid=159764">Khab&aacute;l Ghoul</a> from <em>Arabian Nights</em>. As black is the color of death, it's long been a black ability, but we've started doing occasionally in red.</p>
+
+	<hr><p><strong>Land destruction</strong></p>
+
+	<p>Primary: red<br>
+	Secondary: black and green<br>
+	Tertiary: white</p>
+
+	<p>This whole category is skewed by the fact that we do a lot fewer of these effects than we once did. Red still has the most land destruction effects, followed by black and green. White only destroys lands when it does mass land destruction&mdash;something that, although still in white's color pie, we simply don't do often.</p>
+
+	<hr><p><strong>"Lhurgoyf" (This creature's power and toughness are equal to the number of cards in your/all graveyards.)</strong></p>
+
+	<p>Primary: green<br>
+	Secondary: black<br>
+	Tertiary: white, blue, and red</p>
+
+	<p>Lhurgoyfs started as a green thing and have since gone on to also be a black thing. On rare occasion, we'll have other colors play in this space, either in a cycle or by caring about some different quality of card in the graveyard. Another change is that sometimes we'll care about the number when casting and lock it down with +1/+1 counters rather than it being a stat you have to keep checking on.</p>
+
+	<hr><p><strong>Life gain</strong></p>
+
+	<p>Primary: white and green</p>
+
+	<p>Secondary: black</p>
+
+	<p>White and green are the two colors that will have effects that simply gain a player life. Black can gain life but only when either sacrificing something, using lifelink, or damaging another creature or player. (See <strong>drain life</strong>) White will sometimes gain life when other creatures enter the battlefield and black will sometimes gain life when other creatures die.</p>
+
+	<hr><p><strong>Life loss</strong></p>
+
+	<p>Primary: black</p>
+
+	<p>Black will sometimes just make players lose life straight up without a drain effect. We more often make them drain effects these days (or just direct damage) because the damage allows black an answer to planeswalkers.</p>
+
+	<hr><p><strong>Lifelink</strong></p>
+
+	<p>Primary: white<br>
+	Secondary: black</p>
+
+	<p>White and black have very different flavor rationales for the abilities, but both use it almost every set.</p>
+
+	<hr><p><strong>"Lockdown" (Enchanted creature doesn't untap.)</strong></p>
+
+	<p>Primary: blue</p>
+
+	<p>This is one of blue's primary creature answers in Limited. It's used almost solely on Auras. See <strong>freeze</strong> for a temporary version, also in blue.</p>
+
+	<hr><p><strong>"Lobotomy" (Choose a non-land card name. Search target player's graveyard hand and library for all cards with that name and exile them.)</strong></p>
+
+	<p>Primary: black</p>
+
+	<p>This ability started on a blue-black card in <em>Tempest</em> called <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=23170" class="autocard-link" data-image-url="http://gatherer.wizards.com/Handlers/Image.ashx?type=card&amp;multiverseid=23170">Lobotomy</a>, but has since drifted to be just a black thing.</p>
+
+	<hr><p><strong>Looking at opponent's hand</strong></p>
+
+	<p>Primary: blue<br>
+	Secondary: black</p>
+
+	<p>Blue is the color that can simply do this effect. Black does it only in conjunction with discarding where it has to choose what gets discarded. We've been scaling back on this effect, as it tends to slow down gameplay. This has had the interesting effect of making the ability appear more in black than blue, as we still make the discard spells.</p>
+
+	<hr><p><strong>"Looting" (Draw a card and discard a card.)</strong></p>
+
+	<p>Primary: blue</p>
+
+	<p>Blue is the color that likes to go searching for answers by digging through its library.</p>
+
+	<hr><p><strong>"Lure" (All creatures able to block this creature must do so.)</strong></p>
+
+	<p>Primary: green</p>
+
+	<p>This ability has been with <em>Magic</em> since <em>Limited Edition (Alpha)</em>, but we've started scaling back how often we do it. It's done infrequently now, and only at higher rarities because of its impact on Limited.</p>
+
+	<p><strong>"Lure," limited (This creature must be blocked this turn if able.)</strong></p>
+
+	<p>Primary: green<br>
+	Secondary: red</p>
+
+	<p>This is the watered-down version of <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=Lure" class="autocard-link" data-image-url="http://gatherer.wizards.com/Handlers/Image.ashx?type=card&amp;name=Lure">Lure</a>. Somebody must block your creature, but everyone doesn't have to. We started occasionally using the ability in red.</p>
+	</div>
+	</dd>
+</dl></div>
+
+<div class="collapsibleBlock">
+<dl class="showHideListItems" style="border: 1px solid black;"><dt>
+	<h2>M&ndash;R</h2>
+	</dt>
+	<dd>
+	<div class="wrapper">
+	<p><strong>Mana production, permanent</strong></p>
+
+	<p>Primary: green<br>
+	Tertiary: black</p>
+
+	<p>Besides being the land-fetching color, green is also the color with permanents that can produce mana turn after turn to help it ramp up quickly and cast large spells. Black does this infrequently, usually with some payment required.</p>
+
+	<hr><p><strong>Mana production, temporary </strong></p>
+
+	<p>Primary: red<br>
+	Secondary: black</p>
+
+	<p>Red is the color best at producing temporary bursts of mana, be it with one-shot spells, permanents with one-time triggers, or things that need to be sacrificed to be used. Black can also get mana but usually requires paying some cost, most often sacrificing something else.</p>
+
+	<hr><p><strong>"Manipulate time" (End the turn.)</strong></p>
+
+	<p>Primary: blue<br>
+	Tertiary: red</p>
+
+	<p>We don't do this ability very often, but when we do it's put in blue and flavored as time manipulation. Red has done it once with a "lose at end of next turn" rider.</p>
+
+	<hr><p><strong>"Maro" ability (This creature's power and toughness are equal to the number of cards in our hand.)</strong></p>
+
+	<p>Primary: Blue and green</p>
+
+	<p>Blue is the color of knowledge and green is the color of wisdom, so those are the two colors that like to care about what you "know."</p>
+
+	<hr><p><strong>"Meddling" (Name a spell. That spell can't be played as long as this card is on the battlefield.)</strong></p>
+
+	<p>Primary: white</p>
+
+	<p>This ability, named after <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=Meddling+Mage" class="autocard-link" data-image-url="http://gatherer.wizards.com/Handlers/Image.ashx?type=card&amp;name=Meddling+Mage">Meddling Mage</a> from <em>Invasion</em> (Chris Pikula's Invitational card), is usually on a creature or enchantment and stops a specific spell from being cast. As this is proactive, it's in white.</p>
+
+	<hr><p><strong>Menace</strong></p>
+
+	<p>Primary: black and red</p>
+
+	<p>This ability started in red when it was an unnamed thing, but was added to black when it became keyworded because intimidate had gone away and black needed some kind of evasion other than flying. There's been some talk that a third color should be secondary or tertiary.</p>
+
+	<hr><p><strong>"Milling" (Target player puts the top N cards from his or her library into his or her graveyard.)</strong></p>
+
+	<p>Primary: blue<br>
+	Secondary: black</p>
+
+	<p>This ability for many years was only in blue, but recently we've started allowing black to do it as well.</p>
+
+	<hr><p><strong>Moving enchantments/counters</strong></p>
+
+	<p>Primary: blue</p>
+
+	<p>Blue is the color of moving attached things. It hasn't moved Equipment yet, but perhaps one day.</p>
+
+	<hr><p><strong>Must attack</strong></p>
+
+	<p>Primary: red</p>
+
+	<p>The flavor of this is great in red, but we've found the gameplay is not always great. So we've been doing less of this in red overall.</p>
+
+	<hr><p><strong>Pacifism-like effect (Enchanted creature cannot attack or block.)</strong></p>
+
+	<p>Primary: white</p>
+
+	<p>This is one of white's strongest forms of creature removal for Limited, usually in the form of an Aura. It infrequently is used on noncreatures. Sometimes the spell also prevents that creature/permanent from using activations. It also sometimes only stops just attacking or just blocking.</p>
+
+	<hr><p><strong>"Panic" (Target creature can't block this turn.)</strong></p>
+
+	<p>Primary: red</p>
+
+	<p>This ability mostly shows up on spells but occasionally as an activated ability at higher rarities.</p>
+
+	<hr><p><strong>Playing cards off top of library, at a cost</strong></p>
+
+	<p>Primary: blue<br>
+	Secondary: green</p>
+
+	<p>This effect is usually on a permanent that makes the top of your library be played face-up. You may then cast cards off the top of your library. Green, when it does this effect, usually limits you to playing a subset of permanents.</p>
+
+	<hr><p><strong>Playing cards off top of library, for free</strong></p>
+
+	<p>Primary: red</p>
+
+	<p>This ability used to be in blue, but we moved it to red as it has a chaotic feel (you don't know what's about to happen) and red needed more stuff.</p>
+
+	<hr><p><strong>"Polymorph" (Exile target creature. Its controller reveals cards from the top of his or her library until he or she reveals a creature card. That player puts that card onto the battlefield.)</strong></p>
+
+	<p>Primary: red<br>
+	Secondary: blue</p>
+
+	<p>For a long time, this ability was a blue thing. When we were looking for more places to expand red, we decided to slice up the polymorph pie. Blue gets transformations where the outcome is known and red gets them where it is not. The idea being that blue only wants to transform something when they know what they're going to get, whereas red is willing to take a risk. Red will also do large chaotic effects where many things change all at once.</p>
+
+	<hr><p><strong>Preventing actions (Your opponents can't cast spells this turn.) </strong></p>
+
+	<p>Primary: white</p>
+
+	<p>White is the proactive color, stopping things from before they happen (as opposed to blue being reactive, stopping things as they happen).</p>
+
+	<hr><p><strong>Protection</strong></p>
+
+	<p>Primary: white<br>
+	Tertiary: blue, black, red, and green</p>
+
+	<p>Protection has dropped from evergreen status (meaning it shows up in most sets) to deciduous status (we can use it when we need it), but it still will show up from time to time. It's mostly a white ability that can show up in other colors, usually with protection from something the color dislikes (an enemy color, artifacts for green, etc.)</p>
+
+	<hr><p><strong>Prowess</strong></p>
+
+	<p>Primary: blue<br>
+	Secondary: red<br>
+	Tertiary: white</p>
+
+	<p>This ability started out as a Jeskai keyword in <em>Khans of Tarkir</em>. It filled a gap we had in blue and red, so that's where we focused it. White has not yet gotten a prowess card outside of <em>Khans of Tarkir </em>block, but I believe it eventually will.</p>
+
+	<hr><p><strong>"Punisher" effects (Opponent chooses one: thing X happens or thing Y happens.)&#8203;</strong></p>
+
+	<p>Primary: red<br>
+	Secondary: black</p>
+
+	<p>In red, one of the two abilities is usually damage to the opponent making the choice; the other option is often something red doesn't normally do in the color pie. Black does this a little, but doesn't tend to have the color pie&ndash;bending aspect.</p>
+
+	<hr><p><strong>Putting cards from hand onto the battlefield</strong></p>
+
+	<ul><li><strong>Putting cards from hand onto the battlefield</strong></li>
+	</ul><p>Primary: green</p>
+
+	<p>This isn't an effect we use all that often, but it's green when we use it.</p>
+
+	<ul><li><strong>Putting artifacts from hand onto the battlefield</strong></li>
+	</ul><p>Primary: blue<br>
+	Secondary: white</p>
+
+	<p>Blue does this as the "friendly to artifacts" color. White will do it when it involves Equipment.</p>
+
+	<ul><li><strong>Putting creatures from hand onto the battlefield</strong></li>
+	</ul><p>Primary: green<br>
+	Secondary: blue and red<br>
+	Tertiary: white and black</p>
+
+	<p>Green does this effect the most often. Blue will do it usually flavored as transformation, and will return one its creatures to its owner's hand. When red does this the creature is most often sacrificed or returned to hand at end of turn. We let all colors dip their toes in this area when messing with creature types of their color.</p>
+
+	<ul><li><strong>Putting enchantments from hand onto the battlefield</strong></li>
+	</ul><p>Primary: white<br>
+	Secondary: green<br>
+	Tertiary: blue</p>
+
+	<p>This is another effect we don't do that often. White and, interestingly, blue tend to do this tied to Auras, while green will put out any enchantment.</p>
+
+	<ul><li><strong>Putting lands from hand onto the battlefield</strong></li>
+	</ul><p>Primary: green</p>
+
+	<p>Green used to do this all the time. It still does it, but not as often as it used to.</p>
+
+	<ul><li><strong>Putting planeswalkers from hand onto the battlefield</strong></li>
+	</ul><p>Primary: white</p>
+
+	<p>We haven't actually done this effect yet. My best guess is it would be in white.</p>
+
+	<hr><p><strong>Random destruction effects (Destruction where the outcome is unknown at the time of casting.)</strong></p>
+
+	<p>Primary: red</p>
+
+	<p>Red is the color of chaos, so we occasionally give it effects that destroy random nonenchantment permanents (sometimes a subset).</p>
+
+	<hr><p><strong>Reach</strong></p>
+
+	<p>Primary: green<br>
+	Secondary: red<br>
+	Tertiary: white</p>
+
+	<p>As green mostly has no flying, this is one of the tools green has to deal with other players' flying creatures. We've very recently decided to make it secondary in red. White's tertiary status comes mostly on archers.</p>
+
+	<hr><p><strong>"Reanimation" (Return a creature card from a graveyard to the battlefield.)</strong></p>
+
+	<p>Primary: black<br>
+	Secondary: white, red, and green</p>
+
+	<p>Black is the best at bringing the dead back to life. It has no real restrictions on what it can bring back. White tends to reanimate smaller creatures, usually with a converted mana cost of 2 or less. It will occasionally reanimate a creature type that is mostly white (things like Angels or Humans). Red has Phoenixes. Green has creatures that can bring themselves back from the graveyard. Both black and white will sometimes reanimate a swath of creatures all at once.</p>
+
+	<hr><p><strong>Removing counters</strong></p>
+
+	<p>Primary: black</p>
+
+	<p>Black is the color that gets rid of counters, but only from permanents on the battlefield and not players.</p>
+
+	<hr><p><strong>"Restocking" (Putting cards from graveyard back into your library.)</strong></p>
+
+	<p>Primary: green<br>
+	Secondary: blue</p>
+
+	<p>This is a means of getting cards in your graveyard back into your library. Green does it most as a "cycle of life" flavor, but blue does it on occasion, sometimes also shuffling your hand in as well and then drawing you cards.</p>
+
+	<hr><p><strong>Returning cards from graveyard to hand</strong></p>
+
+	<ul><li><strong>Return target card from graveyard to hand</strong></li>
+	</ul><p>Primary: green</p>
+
+	<p>The ability to get back any card is mostly done in green and usually appears at uncommon or higher in rarity.</p>
+
+	<ul><li><strong>Return target artifact from graveyard to hand</strong></li>
+	</ul><p>Primary: blue<br>
+	Secondary: white</p>
+
+	<p>Blue has the best affinity for artifacts (pun intended), so it's the color that gets them back the easiest, although white can do it as well. Sometimes white will get back Equipment in particular, if that's a theme in the set.</p>
+
+	<hr><p><strong>&bull; Return target creature from graveyard to hand</strong></p>
+
+	<p>Primary: black<br>
+	Secondary: white</p>
+
+	<p>Black can return any creature, but only from your graveyard. (We don't allow you to put other player's cards in your hand.) Black will often do this as an enters-the-battlefield effect nicknamed a "<a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=Gravedigger" class="autocard-link" data-image-url="http://gatherer.wizards.com/Handlers/Image.ashx?type=card&amp;name=Gravedigger">Gravedigger</a>," as that's the card that did it first. White usually returns creatures with smaller converted mana costs.</p>
+
+	<ul><li><strong>Return target enchantment from graveyard to hand</strong></li>
+	</ul><p>Primary: white</p>
+
+	<p>Getting back enchantments is primarily a white thing.</p>
+
+	<ul><li><strong>Return target instant from graveyard to hand</strong></li>
+	</ul><p>Primary: blue<br>
+	Secondary: red</p>
+
+	<p>As blue and red are the spell colors (they have the highest percentage of spells versus creatures), they are the two colors that can get instants back. When there is a choice to separate them, blue leans toward getting back instants and red leans toward getting back sorceries.</p>
+
+	<ul><li><strong>Return target land from graveyard to hand</strong></li>
+	</ul><p>Primary: green</p>
+
+	<p>While green can get back any card, when the card types are divvied up, green often gets back lands.</p>
+
+	<ul><li><strong>Return target sorcery from graveyard to hand</strong></li>
+	</ul><p>Primary: red<br>
+	Secondary: blue</p>
+
+	<p>This is the same as for getting back instants, but the colors are swapped.</p>
+
+	<hr><p><strong>Rules setting </strong></p>
+
+	<p>Primary: white<br>
+	Secondary: blue, black, red, and green</p>
+
+	<p>These cards are permanents, mostly creatures and enchantments, that change some basic rule of the game. Every color has some amount of access to do this, but white does it at the highest volume.</p>
+
+	<hr><p><strong>"Rummaging" (Discard a card and draw a card.)</strong></p>
+
+	<p>Primary: red</p>
+
+	<p>Red has its version of "looting" (see <strong>looting</strong>) but it's recklessness has it discard the card before drawing.</p>
+	</div>
+	</dd>
+</dl></div>
+
+<div class="collapsibleBlock">
+<dl class="showHideListItems" style="border: 1px solid black;"><dt>
+	<h2>S&ndash;Z</h2>
+	</dt>
+	<dd>
+	<div class="wrapper">
+	<div>
+	<p><strong>Scry</strong></p>
+
+	<p>Primary: blue<br>
+	Secondary: white, black, red, and green</p>
+
+	<p>All colors have access to scry but blue gets the most. Blue also gets the largest scry numbers with red getting the lowest.</p>
+
+	<hr><p><strong>"Sengir" ability (When a creature damaged by this creature dies, put a +1/+1 counter on this creature.)</strong></p>
+
+	<p>Primary: black</p>
+
+	<p>This ability appeared in <em>Limited Edition (Alpha)</em> on <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?name=Sengir+Vampire" class="autocard-link" data-image-url="http://gatherer.wizards.com/Handlers/Image.ashx?type=card&amp;name=Sengir+Vampire">Sengir Vampire</a> and gets used occasionally in black. Because it doesn't often result in the creature getting +1/+1 counters, we now often do variations of it.</p>
+
+	<hr><p><strong>"Specter" ability (When this creature deals combat damage to an opponent, that player discards a card.)</strong></p>
+
+	<p>Primary: black</p>
+
+	<p>This ability is often tied to the Specter creature type. Just as the "curiosity" ability is in the card drawing color, so too is the "Specter" ability in the discard color, black.</p>
+
+	<hr><p><strong>Spell copying (Copy target instant or sorcery spell. You may choose new targets for the copy.)</strong></p>
+
+	<p>Primary: blue and red</p>
+
+	<p>This ability is mostly done at rare. We bounced back and forth between whether blue or red was supposed to do it and finally let them both do it.</p>
+
+	<hr><p><strong>Spell redirection (Change the target of target spell with a single target.)</strong></p>
+
+	<p>Primary: blue and red</p>
+
+	<p>The same thing happened with spell redirection as spell copying, and we ended up with the same solution&mdash;letting both colors do it.</p>
+
+	<hr><p><strong>"Stalking" (This creature can't be blocked by more than one creature.)</strong></p>
+
+	<p>Primary: green</p>
+
+	<p>This is usually used on creatures 3/3 or bigger.</p>
+
+	<hr><p><strong>Stealing permanents, permanently</strong></p>
+
+	<p>Primary: blue<br>
+	Tertiary: black</p>
+
+	<p>Blue is the main color to gain control of other players' permanents. It can steal any type of permanent but most often steals creatures. Black is allowed to steal things infrequently. Red also steals but only temporarily. (see below)</p>
+
+	<hr><p><strong>Stealing permanents, temporarily</strong></p>
+
+	<p>Primary: red</p>
+
+	<p>Red takes control of permanents, mostly creatures, for the turn, gives them haste, and then returns them at end of turn.</p>
+
+	<hr><p><strong>"Super trample" (You may have this creature assign combat damage as though it weren't blocked.)</strong></p>
+
+	<p>Primary: green</p>
+
+	<p>We don't do this ability very often, but when we do, we do it in green.</p>
+
+	<hr><p><strong>Switch power/toughness</strong></p>
+
+	<p>Primary: blue<br>
+	Secondary: red</p>
+
+	<p>Blue does this most often, but red does it on occasion. Sometimes this is on creatures that can switch their own power and toughness.</p>
+
+	<hr><p><strong>Tapping creatures</strong></p>
+
+	<p>Primary: white<br>
+	Secondary: blue</p>
+
+	<p>White is the main color of tapping creatures. Blue usually taps creatures only when also given the ability to untap them. (See <strong>twiddle</strong>) The one exception is when it "freezes" creatures. (See <strong>freezing</strong>)</p>
+
+	<hr><p><strong>Taxing</strong></p>
+
+	<p>Primary: white</p>
+
+	<p>Taxing cards are ones that force the opponent to pay some cost to do an activity they could normally do without an additional cost. Taxing cards are most often creatures and enchantments, but occasionally are done as one-shot spells.</p>
+
+	<hr><p><strong>"Time Walk" (Take an extra turn after this one.)</strong></p>
+
+	<p>Primary: blue<br>
+	Tertiary: red</p>
+
+	<p>Blue is the main color to take extra turns. It usually does it at mythic rare. Red on rare occasion will do a "<a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=383131" class="autocard-link" data-image-url="http://gatherer.wizards.com/Handlers/Image.ashx?type=card&amp;multiverseid=383131">Time Walk</a>" that comes with some big penalty&mdash;often losing the game at the end of the extra turn.</p>
+
+	<hr><p><strong>Token generation</strong></p>
+
+	<p>Primary: white and green<br>
+	Secondary: blue, black, and red</p>
+
+	<p>All colors can make creature tokens. White and green, as the two main creature colors, do it most often. White tends to make smaller creature tokens, usually 1/1s, while green tends to make larger ones, from 3/3 and up. White often will make multiple tokens at once since they're smaller. Black most often makes 2/2 Zombies. Red most often makes 1/1 Goblins. Sometimes red's token creatures are a little bigger and get exiled at end of turn.</p>
+
+	<hr><p><strong>Trample</strong></p>
+
+	<p>Primary: green<br>
+	Secondary: red<br>
+	Tertiary: white, blue, and black</p>
+
+	<p>Green is the main trample color, but red's share has been growing over time. Any color is allowed access to trample if the creature is large enough and of a higher rarity.</p>
+
+	<hr><p><strong>"Transformation" (Target creature becomes a (color) (card type) with N power and N toughness.)</strong></p>
+
+	<p>Primary: blue</p>
+
+	<p>Transformation can be temporary, through a one-shot spell that lasts for the turn, or more permanent, usually through an Aura. It overwrites the base power and toughness of the creature. This ability used to be in both blue and white, but we decided to focus it in blue.</p>
+
+	<hr><p><strong>"Tutoring" (Search your library for a card and put that card in your hand.)</strong></p>
+
+	<ul><li><strong>"Tutor" for any card</strong></li>
+	</ul><p>Primary: black</p>
+
+	<p><em>Limited Edition (Alpha)</em> had the card <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=394025" class="autocard-link" data-image-url="http://gatherer.wizards.com/Handlers/Image.ashx?type=card&amp;multiverseid=394025">Demonic Tutor</a>, which locked in black as the color to tutor for any type of card. There's been much talk over the years that blue seems philosophically the better color to have this ability, but so far no changes have been made.</p>
+
+	<ul><li><strong>"Tutor" for an artifact</strong></li>
+	</ul><p>Primary: blue<br>
+	Secondary: white</p>
+
+	<p>Blue can go get any type of artifact. White tends to focus on certain subsets such as Equipment and Vehicles.</p>
+
+	<ul><li><strong>"Tutor" for a creature</strong></li>
+	</ul><p>Primary: green<br>
+	Secondary: white, blue, black, and red</p>
+
+	<p>Green is the main color to tutor for creatures. Sometimes it will even put them directly onto the battlefield. All colors have access to tutoring for specific creature types that are in their color. Red, for example, can tutor for Dragons.</p>
+
+	<ul><li><strong>"Tutor" for an enchantment</strong></li>
+	</ul><p>Primary: white</p>
+
+	<p>White is the color that searches the library for enchantments.</p>
+
+	<ul><li><strong>"Tutor" for an instant or sorcery</strong></li>
+	</ul><p>Primary: blue</p>
+
+	<p>When tutoring, the two spell types are often put together and blue seeks them out.</p>
+
+	<ul><li><strong>"Tutor" for a land</strong></li>
+	</ul><p>Primary: green<br>
+	Tertiary: white, blue, black, and red</p>
+
+	<p>Green, being one of the creature colors, is the best at tutoring for creatures. It occasionally will put them directly onto the battlefield. The other four colors are allowed to occasionally tutor for their own basic land type.</p>
+
+	<ul><li><strong>"Tutor" for a planeswalker</strong></li>
+	</ul><p>Primary: white</p>
+
+	<p>Only one card has done this so far, and it was white.</p>
+
+	<ul><li><strong>"Tutor" from top N cards of library</strong></li>
+	</ul><p>To cut down on shuffling, we've started to do more effects where you "tutor" just from a handful of cards from the top of your library, usually four or five. Anything else listed in this subsection that colors can do is what they can do here.</p>
+
+	<hr><p><strong>"Twiddle" (Tap or untap target creature/permanent.)</strong></p>
+
+	<p>Primary: blue</p>
+
+	<p>Ever since the card <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=45235" class="autocard-link" data-image-url="http://gatherer.wizards.com/Handlers/Image.ashx?type=card&amp;multiverseid=45235">Twiddle</a> appeared in <em>Limited Edition (Alpha)</em>, blue has had the ability to tap or untap permanents. It's most often used just on creatures. Blue doesn't tend to just tap or just untap, but rather give you the choice between the two. The one exception is "freezing" where it taps creatures and keeps them from untapping for a turn. (See <strong>freezing</strong>)</p>
+
+	<hr><p><strong>Untapping creatures </strong></p>
+
+	<p>Primary: green and blue<br>
+	Secondary: white</p>
+
+	<p>Untapping creatures used to be white's domain, but we moved individual creature untapping off to green to give it more creature answers. White still can untap all your creatures or an individual creature on a spell that's defined as solely defensive. Blue's ability to untap is usually accompanied by its ability to also tap (see <strong>twiddle</strong> above).</p>
+
+	<hr><p><strong>Untapping lands</strong></p>
+
+	<p>Primary: green<br>
+	Tertiary: blue</p>
+
+	<p>Green, as the color most in tune with lands and acquiring mana, is the color that most often untaps lands. Blue does this a little.</p>
+
+	<hr><p><strong>Untaps itself </strong></p>
+
+	<p>Primary: blue<br>
+	Secondary: white</p>
+
+	<p>This is a creature that has an activated ability (or sometimes a triggered ability) that untaps itself. It's mostly used in blue, but occasionally in white when we want to simulate vigilance because actual vigilance is problematic due to timing.</p>
+
+	<hr><p><strong>Vigilance</strong></p>
+
+	<p>Primary: white<br>
+	Secondary: green</p>
+
+	<p>White tends to get this on creatures where the power is equal to or less than the toughness, and seldom with a power greater than 3. Green tends to get this ability on larger creatures to differentiate it from white.</p>
+
+	<hr><p><strong>"Warlord" (This creature's power and toughness is equal to the number of creatures you control.)</strong></p>
+
+	<p>Primary: white<br>
+	Secondary: green</p>
+
+	<p>This ability started in red with <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=159262" class="autocard-link" data-image-url="http://gatherer.wizards.com/Handlers/Image.ashx?type=card&amp;multiverseid=159262">Keldon Warlord</a> in <em>Limited Edition (Alpha)</em>. We later moved it into green, as green is the creature color. The ability then got moved into white because white is the army color that likes giving rewards for having lots of little creatures. We still do the ability a little in green, but it's mostly in white these days.</p>
+
+	<hr><p><strong>"Wheeling" (All players discard their hand and draw N cards.)</strong></p>
+
+	<p>Primary: blue and red</p>
+
+	<p>There's a big debate in R&amp;D as to whether this is supposed to be a red ability. It obviously goes all the way back to <em>Limited Edition (Alpha)</em> with <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=383151" class="autocard-link" data-image-url="http://gatherer.wizards.com/Handlers/Image.ashx?type=card&amp;multiverseid=383151">Wheel of Fortune</a>, but it's a raw form of card advantage that's supposed to be something red is bad at. For now, it stays in red's (and blue's) part of the color pie.</p>
+
+	<hr><p><strong>"You don't lose" (Permanents that prevent you from losing the game while they're on the battlefield, usually with an alternate means to lose.)</strong></p>
+
+	<p>Primary: black</p>
+
+	<p>This started with <a href="http://gatherer.wizards.com/Pages/Card/Details.aspx?multiverseid=69" class="autocard-link" data-image-url="http://gatherer.wizards.com/Handlers/Image.ashx?type=card&amp;multiverseid=69">Lich</a> in <em>Limited Edition (Alpha)</em> and has continued to be used on rare occasion.</p>
+	</div>
+	</div>
+	</dd>
+</dl></div>
+
+<h1>Whew!</h1>
+
+<p>I'll be honest, I didn't have any idea how big a project this was going to be when I started. I hope you all enjoy this rather exhaustive look at the mechanical color pie. As I assume players will use this column as a resource, if you see something missing or you think is incorrect, please let me know so I can fix it (or explain why it's correct). You can <a href="mailto:making.magic@hotmail.com">email me</a> or contact me through any of my social media accounts (<a href="https://twitter.com/maro254" target="_blank">Twitter</a>, <a href="http://markrosewater.tumblr.com/" target="_blank">Tumblr</a>, <a href="https://plus.google.com/107824009487778543249/posts" target="_blank">Google+</a>, and <a href="http://instagram.com/mtgmaro" target="_blank">Instagram</a>).</p>
+
+<p>Join me next week for the kind of article that's sure to get you all talking.</p>
+
+<p>Until then, may you have as much fun exploring the color pie as I do.</p>
+
+<div id="podcast-listing"><hr><p></p><div class="ark-podcast-list-item ark-podcast-list-item-article">
+	<div class="ark-podcast-list-item--content">
+		<div class="ark-podcast-list-item--date"><span class="month">&nbsp;</span></div>
+		<div class="ark-podcast-list-item--player-window">
+									<h5 class="ark-podcast-list-item--player-window--title">
+				#440: Dungeons &amp; Dragons			</h5>
+			<button type="button" class="ark-podcast-list-item--player-window--close"></button>
+		</div>
+		<div class="ark-podcast-list-item--content--wrapper">
+			<div class="ark-podcast-list-item--content--text-content">
+												<h5 class="ark-podcast-list-item--content--title">
+					#440: Dungeons &amp; Dragons				</h5>
+				<p class="ark-podcast-list-item--content--duration">38:26</p>
+				<div class="ark-podcast-list-item--content--summary">
+					<p>Wizards of the Coast makes games other than <em>Magic</em>. Today, I talk about one of our other big games. I discuss its history, how it influenced <em>Magic</em>, and how it came to be a Wizards of Coast game.</p>				</div>
+			</div>
+			<div class="ark-podcast-list-item--content--actions">
+					 
+					<button type="button" class="ark-podcast-list-item--open-to-play" data-ark-audio-player-url="http://media.wizards.com/2017/podcasts/magic/drivetowork440_dnd.mp3" data-ark-audio-player-media-type="mp3" data-ark-audio-player-error-message="The podcast can't be displayed at the moment.">
+					Play</button>
+					<a class="ark-podcast-list-item--download" target="_blank" href="http://media.wizards.com/2017/podcasts/magic/drivetowork440_dnd.mp3" download="http://media.wizards.com/2017/podcasts/magic/drivetowork440_dnd.mp3">Download MP3 Format</a>
+							</div>
+		</div>
+	</div>
+</div>
+
+<div><div class="ark-podcast-list-item ark-podcast-list-item-article">
+	<div class="ark-podcast-list-item--content">
+		<div class="ark-podcast-list-item--date"><span class="month">&nbsp;</span></div>
+		<div class="ark-podcast-list-item--player-window">
+									<h5 class="ark-podcast-list-item--player-window--title">
+				#441: Prereleases			</h5>
+			<button type="button" class="ark-podcast-list-item--player-window--close"></button>
+		</div>
+		<div class="ark-podcast-list-item--content--wrapper">
+			<div class="ark-podcast-list-item--content--text-content">
+												<h5 class="ark-podcast-list-item--content--title">
+					#441: Prereleases				</h5>
+				<p class="ark-podcast-list-item--content--duration">35:30</p>
+				<div class="ark-podcast-list-item--content--summary">
+					<p>This is a history podcast where I talk all about the history of Prereleases, from the first one for <em>Ice Age</em> to modern day.</p>				</div>
+			</div>
+			<div class="ark-podcast-list-item--content--actions">
+					 
+					<button type="button" class="ark-podcast-list-item--open-to-play" data-ark-audio-player-url="http://media.wizards.com/2017/podcasts/magic/drivetowork441_prereleases.mp3" data-ark-audio-player-media-type="mp3" data-ark-audio-player-error-message="The podcast can't be displayed at the moment.">
+					Play</button>
+					<a class="ark-podcast-list-item--download" target="_blank" href="http://media.wizards.com/2017/podcasts/magic/drivetowork441_prereleases.mp3" download="http://media.wizards.com/2017/podcasts/magic/drivetowork441_prereleases.mp3">Download MP3 Format</a>
+							</div>
+		</div>
+	</div>
+</div></div></div>
+
+<ul><li><a href="http://media.wizards.com/2017/podcasts/magic/drivetowork439_otherteams.mp3" target="_blank"><b>Episode 439</b></a> Other Teams (18.1 MB)</li>
+	<li><a href="http://media.wizards.com/2017/podcasts/magic/drivetowork438_rarity.mp3" target="_blank"><b>Episode 438</b></a> Rarity (21.3 MB)</li>
+	<li><a href="http://media.wizards.com/2017/podcasts/magic/drivetowork437_gds-pt-2.mp3" target="_blank"><b>Episode 437</b></a> Great Designer Search 1, Part 2 (20.6 MB)</li>
+</ul></body></html>
+      </div>
+      <!-- BEGIN :: Article footer -->
+      <div class="article-footer">
+        <p class="posted-in">
+          Posted in          <a href="/en/articles/columns/making-magic">Making Magic</a>
+          on June 5, 2017        </p>
+        <div class="sharing">
+          <div class="share-article">Share Article</div>
+          <div class="social-share">
+            <a class="facebook" href="#" data-share-url="http://magic.wizards.com/articles/archive/making-magic/mechanical-color-pie-2017-2017-06-05"><span>Share</span></a>
+            <a class="twitter" href="#" data-share-url="http://magic.wizards.com/articles/archive/making-magic/mechanical-color-pie-2017-2017-06-05"><span>Tweet</span></a>
+            <a class="google" href="#" data-share-url="http://magic.wizards.com/articles/archive/making-magic/mechanical-color-pie-2017-2017-06-05"><span>Share</span></a>
+          </div>
+        </div>
+      </div>
+      <!-- END :: Article footer -->
+    </article>
+  </div>
+
+  <!-- BEGIN :: ASIDE -->
+        <aside>
+      <div class="aside-wrapper">
+        
+
+            <h2><span>FEATURED ARTICLES</span></h2>
+      <div class="articles-bloc">
+            <div class="article">
+  <div class="wrap">
+    <div class="visual" style="background-image: url(http://magic.wizards.com/sites/mtg/files/images/hero/FEAT20170606_icon.jpg)"></div>
+    <div class="details">
+      <a href="/en/articles/archive/feature/artists-magic-noah-bradley-2017-06-06" class="cat">FEATURE</a>
+      <p class="date">June 6, 2017</p>
+      <a href="/en/articles/archive/feature/artists-magic-noah-bradley-2017-06-06" class="title">The Artists of Magic: Noah Bradley</a>
+              <a href="/en/articles/archive/feature/artists-magic-noah-bradley-2017-06-06" class="auth">Nicholas Wolfram</a>
+      
+      <div class="infos">
+                  <p>Nicholas sits down with Noah Bradley to discuss his art, and promises not to tell that Noah has never played Commander.
+</p>
+                <p><a href="/en/articles/archive/feature/artists-magic-noah-bradley-2017-06-06" class="learn-more">Learn More</a></p>
+      </div>
+    </div>
+  </div>
+</div><div class="article">
+  <div class="wrap">
+    <div class="visual" style="background-image: url(http://magic.wizards.com/sites/mtg/files/images/hero/MD20170606_icon.jpg)"></div>
+    <div class="details">
+      <a href="/en/articles/archive/magic-digital/magic-streamers-watch-2017-06-06" class="cat">Magic Digital</a>
+      <p class="date">June 6, 2017</p>
+      <a href="/en/articles/archive/magic-digital/magic-streamers-watch-2017-06-06" class="title">Magic Streamers to Watch</a>
+              <a href="/en/articles/archive/magic-digital/magic-streamers-watch-2017-06-06" class="auth">Gaby Spartz</a>
+      
+      <div class="infos">
+                  <p>With so many great players streaming Magic, there's always someone online to watch and learn from!
+</p>
+                <p><a href="/en/articles/archive/magic-digital/magic-streamers-watch-2017-06-06" class="learn-more">Learn More</a></p>
+      </div>
+    </div>
+  </div>
+</div><div class="article">
+  <div class="wrap">
+    <div class="visual" style="background-image: url(http://magic.wizards.com/sites/mtg/files/images/hero/DMU_AKH_02_2017_icon.jpg)"></div>
+    <div class="details">
+      <a href="/en/articles/archive/daily-magic-update/update-2017-06-06" class="cat">DAILY MAGIC UPDATE</a>
+      <p class="date">June 6, 2017</p>
+      <a href="/en/articles/archive/daily-magic-update/update-2017-06-06" class="title">The June 6, 2017 Update</a>
+              <a href="/en/articles/archive/daily-magic-update/update-2017-06-06" class="auth">Blake Rasmussen</a>
+      
+      <div class="infos">
+                  <p>The Daily Magic Update is a roundup of everything you should know for today from throughout the Magic community.
+</p>
+                <p><a href="/en/articles/archive/daily-magic-update/update-2017-06-06" class="learn-more">Learn More</a></p>
+      </div>
+    </div>
+  </div>
+</div>          </div>
+                                  </div>
+    </aside>
+    <!-- END :: ASIDE -->
+
+  
+  <h2><span>Latest Making Magic Articles</span></h2>
+  <div class="articles-bloc releated">
+
+              <div class="article">
+          <div class="wrap">
+                          <div class="visual" style="background-image: url(http://magic.wizards.com/sites/mtg/files/images/hero/MM20170529_icon.jpg);"></div>
+                        <div class="details">
+                              <a href="#" class="cat">MAKING MAGIC</a>
+                            <p class="date"></p>
+              <a href="#" class="title">Odds & Ends: Amonkhet, Part 2</a>
+                              <a href="#" class="auth">by, Mark Rosewater</a>
+                            <div class="infos">
+                                  <p>Last week, I started a mailbag column answering your questions about Amonkhet. You guys gave me so many good questions, I had to turn it into a two-parter. That said, let's get to the que...</p>
+                                <p><a href="/en/articles/archive/making-magic/odds-ends-amonkhet-part-2-2017-05-29" class="learn-more">Learn More</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+              <div class="article">
+          <div class="wrap">
+                          <div class="visual" style="background-image: url(http://magic.wizards.com/sites/mtg/files/images/hero/MM20170522_icon.jpg);"></div>
+                        <div class="details">
+                              <a href="#" class="cat">MAKING MAGIC</a>
+                            <p class="date"></p>
+              <a href="#" class="title">Odds & Ends: Amonkhet, Part 1</a>
+                              <a href="#" class="auth">by, Mark Rosewater</a>
+                            <div class="infos">
+                                  <p>For every main expansion, I do a mailbag column called "Odds &amp; Ends" where I answer questions from all of you about the latest set. No reason to stop the tradition now, as there's ple...</p>
+                                <p><a href="/en/articles/archive/making-magic/odds-ends-amonkhet-part-1-2017-05-22" class="learn-more">Learn More</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+            <div class="article static">
+        <div class="wrap">
+          <div class="visual" style="background-image: url(http://magic.wizards.com/sites/all/themes/wiz_mtg/images/global/reconstructedArchive.jpg);"></div>
+          <div class="details">
+            <p class="title"><span>Articles</span></p>
+            <div class="details">
+              <p class="title"><span>Articles</span></p>
+              <p class="sub-title">Making Magic Archive</p>
+              <div class="infos">
+                <p>Consult the archives for more articles!</p>
+                <p><a href="/en/articles/columns/making-magic" class="learn-more">See All</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+</div>    </div>
+
+  </div>
+</div> <!-- /block-inner /block -->  </div>
+  </div>
+
+  <!-- Footer -->
+    <footer>
+    <div id="back-to-top">
+      <a href="#viewport">Back to top</a>
+    </div>
+    <div id="where-to-buy">
+      <div class="content page-width">
+        <form action="/en/articles/archive/making-magic/mechanical-color-pie-2017-2017-06-05" method="post" id="wiz-store-and-event-locator-search-form--2" accept-charset="UTF-8"><div><div class="intro"><div class="wrap"><h5>Where to Play and Buy</h5><p>Find a location to buy or play<br />Magic: The Gathering near you.</p></div></div><div class="form"><div class="wrap"><span class="column zip-code"><div class="form-item form-type-textfield form-item-search-string">
+ <input placeholder="Enter your city or postal code" type="text" id="edit-search-string--4" name="search-string" value="" size="25" maxlength="128" class="form-text" />
+</div>
+</span><span class="column actions"><button class="action-button" type="submit">Find Now !</button></span></div></div><input class="hide form-submit" type="submit" id="edit-search-button--4" name="op" value="Find Now" /><input type="hidden" name="form_build_id" value="form-IbZbteSUJSrI5k2PnK8CGffNpu7IE0NS9ZtskHsN3Es" />
+<input type="hidden" name="form_id" value="wiz_store_and_event_locator_search_form" />
+</div></form>      </div>
+    </div>
+
+    <div class="main-footer">
+      <div class="content page-width">
+        <div class="text">
+                      <div id="locale-select">
+              <label for="locale-select-ddl">Select your language:</label>
+
+              <div class="select-wrapper">
+                <select id="locale-select-ddl">
+                  <option value="" >简体中文</option><option value="/zh-hant/node/1160901" >繁體中文</option><option value="/fr/node/1160881" >Français</option><option value="/de/node/1160886" >Deutsch</option><option value="/it/node/1160891" >Italiano</option><option value="/ja/node/1161591" >日本語</option><option value="" >한국어</option><option value="" >Português (Brasil)</option><option value="/ru/node/1160896" >Русский</option><option value="/es/node/1160906" >Español</option><option value="/en/node/1160871" selected>English</option>                </select>
+              </div>
+            </div>
+          
+          
+
+      <p class="brand-family-title">Wizards Brand Family</p>
+    <p class="brand-family-menu"><a href="http://magic.wizards.com" target="_blank">magic</a> <em>|</em> <a href="http://www.wizards.com/dnd" target="_blank">d&amp;d</a> <em>|</em> <a href="http://www.wizards.com/wpn" target="_blank">wpn</a> <em>|</em> <a href="http://dm.takaratomy.co.jp" target="_blank">duel masters</a> <em>|</em> <a href="http://www.wizards.com/default.asp?x=ah/welcome" target="_blank">avalon hill</a></p>
+  <p><a href="http://company.wizards.com/tou" target="_blank">Terms of Use</a> <em>|</em> <a href="http://company.wizards.com/conduct" target="_blank">Code of Conduct</a> <em>|</em> <a href="http://company.wizards.com/policy" target="_blank">Privacy Policy</a> <em>|</em> <a href="http://www.wizards.com/customerservice" target="_blank">Customer Service</a> <em>|</em> <a href="/en/articles/archive/our-cookie-policy-2013-10-28">Cookies</a></p>
+  <p class="copyright">© 1995-2017 Wizards of the Coast LLC, a subsidiary of Hasbro, Inc. All Rights Reserved.</p>
+
+        </div>
+        
+
+      <p class="logo wizard">
+      <a href="http://company.wizards.com"
+         target="_blank"
+         title="Wizards of the Coast"
+        ><img src="/sites/all/themes/wiz_mtg/img/interface/wizard-of-the-coast-logo.png" alt="Wizards of the Coast" /></a>
+    </p>
+  
+      <p class="logo hasbro">
+      <a href="http://www.hasbro.com"
+         target="_blank"
+         title="Hasbro"
+	    ><img src="/sites/all/themes/wiz_mtg/img/interface/hasbro-logo.svg" alt="Hasbro" /></a>
+    </p>
+  
+      <p class="logo privacy">
+      <a href="http://www.esrb.org/confirm/wizards-confirmation.aspx"
+         target="_blank"
+         title="ESRB Privacy Certified"
+	    ><img src="/sites/all/themes/wiz_mtg/img/interface/esrb-badge.png" alt="ESRB Privacy Certified" /></a>
+    </p>
+  
+      </div>
+    </div>
+  </footer>
+  </div>
+
+<div id="cookies-warning">
+	<div class="wrap page-width">
+		<div class="text">
+			<p>
+        We use cookies on this site to enhance your user experience. By clicking any link on this page or by clicking <strong>Yes</strong>, you are giving your consent for us to set cookies.        <a href="http://company.wizards.com/policies/web/cookie" target="_blank"> (Learn more about cookies)</a>
+      </p>
+		</div>
+		<p class="actions">
+			<button type="button" class="button agree">Yes, I agree</button>
+			<a href="http://company.wizards.com/policies/web/cookie" target="_blank" class="button disagree">No, I want to find out more</a>
+		</p>
+	</div>
+</div>    <script type="text/javascript" src="http://magic.wizards.com/sites/all/themes/wiz_mtg/js/ShareButton.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/modules/features/wiz_bean_content_deck_list/wiz_bean_content_deck_list.js?oqvyyu"></script>
+<script type="text/javascript" src="http://magic.wizards.com/sites/all/modules/features/wiz_bean_content_deck_list/masonry.pkgd.min.js?oqvyyu"></script>
+  </div>
+
+	<!-- Crazy Egg -->
+	<script type="text/javascript">
+		setTimeout(function(){var a=document.createElement("script");
+		var b=document.getElementsByTagName("script")[0];
+		a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0009/9185.js?"+Math.floor(new Date().getTime()/3600000);
+		a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+	</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"d92d812ac7","applicationID":"22111946","transactionName":"YVNXMkcAD0sHAUdcXFgZdAVBCA5WSRJSUlZpW1QIVAYESjkMXFFWaUBcA0I+EVkBBw==","queueTime":0,"applicationTime":473,"atts":"TRRURA8aHEU=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
