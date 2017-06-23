@@ -1,12 +1,9 @@
 import re
+import json
+from json import JSONEncoder
 
-
-
-
-
-class Ability:
-
-    #parenthetical = re.compile('(.*)')
+class Ability(JSONEncoder):
+    # parenthetical = re.compile('(.*)')
 
     def assign_associations(self):
         if self.association_split is None:
@@ -22,6 +19,7 @@ class Ability:
 
 
     def __init__(self, title, association, description):
+        print('title: {}'.format(title))
         title_text = title.strong.get_text()
         #print(self.parenthetical.match(title_text))
         if title_text.find("(") != -1:
@@ -36,3 +34,16 @@ class Ability:
         self.assign_associations()
 
         self.description = description.get_text()
+
+    def to_json(self):
+        ability = {}
+        ability['title'] = self.title
+        ability['description'] = self.description
+
+        if hasattr(self, 'primary'):
+            ability['primary'] = self.primary
+        if hasattr(self, 'seconday'):
+            ability['secondary'] = self.seconday
+        if hasattr(self,'tertiary'):
+            ability['tertiary'] = self.tertiary
+        return ability;

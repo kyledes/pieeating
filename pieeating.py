@@ -1,12 +1,19 @@
+# -*- coding: utf-8 -*-
 from bs4 import BeautifulSoup
 import requests
 import re
+
+from AbilityJSONEncoder import AbilityJSONEncoder
 from Ability import Ability
+from MetaAbility import MetaAbility
+import json
+
 
 proxies = {'http':'http://192.168.1.19:80'}
 
 #page = requests.get("http://magic.wizards.com/en/articles/archive/making-magic/mechanical-color-pie-2017-2017-06-05", proxies=proxies)
-
+meta_abilites = []
+abilities = []
 
 def with_ul_child(tag):
     return tag.find('ul')
@@ -17,8 +24,7 @@ def parse_complex_group(node_group):
     processed_abilities = []
     for i in range(0, len(node_group), 3):
         processed_abilities.append(Ability(node_group[i], node_group[i+1], node_group[i+2]))
-
-
+    meta_abilites.append(MetaAbility(metaAbility, processed_abilities))
 
 
 def parse_abilities(node_group):
@@ -37,6 +43,7 @@ with open('maro','r') as page:
 
     abclist = []
 
+    #re = re.compile('[A-Z][A-Z]')
     re = re.compile('[A-Z]–[A-Z]')
     # print(wrappers[0])
     for wrap in wrappers:
@@ -48,8 +55,6 @@ with open('maro','r') as page:
             pass
 
     print('abclist: {}'.format(len(abclist)))
-
-    abilities = []
 
     for wrap in abclist:
         if wrap.div.div is not None:
@@ -79,8 +84,16 @@ with open('maro','r') as page:
             elif next_node.name == 'hr':
                 abilities.append(parse_abilities(list(node_group)))
                 node_group = []
-
-
-
-
     print(len(abilities))
+
+with open('parsed_abilites', 'w') as parse:
+    print(abilities)
+    print(meta_abilites)
+   # blarg = MetaAbility(None, None).encode(meta_abilites)
+   # print(blarg, file=parse)
+    for meta in meta_abilites:
+        print(meta.to_json(), file=parse)
+    for ability in abilities:
+        if hasattr(ability, 'to_json'):
+            print(ability.to_json(), file=parse)
+   # json.dumps(meta_abilites, indent=4, cls=AbilityJSONEncoder)

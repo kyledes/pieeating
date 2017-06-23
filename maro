@@ -1175,9 +1175,9 @@ Now here are all the abilities listed in alphabetical order. I've included a gre
 	<hr><p><strong>Creature pumping</strong></p>
 
 	<ul><li><strong>+N/+N (on creatures) </strong></li>
-	</ul><p>Primary: black</p>
-
-	<p>Secondary: green</p>
+	</ul><p>Primary: black
+	<br>
+	Secondary: green</p>
 
 	<p>For black this is mostly seen on Shades and usually requires black mana. Green gets unlimited pumping activations but usually only when the activation cost is high enough that multiple activations don't happen until the late game.</p>
 
@@ -1248,8 +1248,8 @@ Now here are all the abilities listed in alphabetical order. I've included a gre
 
 	<ul><li><strong>-N/-N (on spells) </strong></li>
 	</ul><p>Primary: black</p>
-
-	<p>Tertiary: white, blue, red, and green</p>
+	<br>
+	Tertiary: white, blue, red, and green</p>
 
 	<p>Black is the only color to do -N/-N abilities on spells. Other colors do put -1/-1 counters on creatures, usually in place of spots where they would do damage in sets with -1/-1 counters.</p>
 
@@ -1538,9 +1538,9 @@ Now here are all the abilities listed in alphabetical order. I've included a gre
 	<hr><p><strong>Flash</strong></p>
 
 	<p>Primary: blue<br>
-	Secondary: green</p>
-
-	<p>Tertiary: white, black, and red</p>
+	Secondary: green
+	<br>
+	Tertiary: white, black, and red</p>
 
 	<p>Everyone gets some access to flash. Blue gets it the most as it plays into the color's reactive play style. Green gets it as one of its versions of creature destruction. White, black, and red get flash when they functionally need it to get an effect to work, most often with reactive enters-the-battlefield effects.</p>
 
@@ -1593,7 +1593,9 @@ Now here are all the abilities listed in alphabetical order. I've included a gre
 	<p>Red can force you to sacrifice artifacts.</p>
 
 	<ul><li><strong>Sacrifice a permanent (Target/all player(s) sacrifice a permanent.)</strong></li>
-	</ul><p>Red can also force you to sacrifice permanents.</p>
+
+	</ul><p>Primary: red</p>
+	<p>Red can also force you to sacrifice permanents.</p>
 
 	<hr><p><strong>"Freeze" creature (Tap target creature. That creature doesn't untap during its controller's next untap step.)</strong></p>
 
@@ -1608,8 +1610,6 @@ Now here are all the abilities listed in alphabetical order. I've included a gre
 	<p>We've been experimenting with this in red as a "land destruction lite."</p>
 
 	<hr><p><strong>Friendly to a card type</strong></p>
-
-	<p>This can involve a wide range of things where you either help that card type (making it cheaper to cast, enhancing it in some way, using it to generate an effect, etc.) or that card type helps you (you get rewarded for playing that card type, having a certain number on the battlefield or in your hand or in the graveyard grants abilities, you can sacrifice them as a resource, etc.)</p>
 
 	<ul><li><strong>Friendly to artifacts</strong></li>
 	</ul><p>Primary: blue</p>
@@ -1714,9 +1714,9 @@ Now here are all the abilities listed in alphabetical order. I've included a gre
 
 	<hr><p><strong>Life gain</strong></p>
 
-	<p>Primary: white and green</p>
+	<p>Primary: white and green<br>
 
-	<p>Secondary: black</p>
+	Secondary: black</p>
 
 	<p>White and green are the two colors that will have effects that simply gain a player life. Black can gain life but only when either sacrificing something, using lifelink, or damaging another creature or player. (See <strong>drain life</strong>) White will sometimes gain life when other creatures enter the battlefield and black will sometimes gain life when other creatures die.</p>
 
@@ -1982,7 +1982,8 @@ Now here are all the abilities listed in alphabetical order. I've included a gre
 
 	<p>Blue has the best affinity for artifacts (pun intended), so it's the color that gets them back the easiest, although white can do it as well. Sometimes white will get back Equipment in particular, if that's a theme in the set.</p>
 
-	<hr><p><strong>&bull; Return target creature from graveyard to hand</strong></p>
+	<ul><li><strong>Return target creature from graveyard to hand</strong></li>
+	</ul>
 
 	<p>Primary: black<br>
 	Secondary: white</p>
@@ -2179,7 +2180,9 @@ Now here are all the abilities listed in alphabetical order. I've included a gre
 	<p>Only one card has done this so far, and it was white.</p>
 
 	<ul><li><strong>"Tutor" from top N cards of library</strong></li>
-	</ul><p>To cut down on shuffling, we've started to do more effects where you "tutor" just from a handful of cards from the top of your library, usually four or five. Anything else listed in this subsection that colors can do is what they can do here.</p>
+	</ul>
+	<p>Primary: unknown</p>
+<p>To cut down on shuffling, we've started to do more effects where you "tutor" just from a handful of cards from the top of your library, usually four or five. Anything else listed in this subsection that colors can do is what they can do here.</p>
 
 	<hr><p><strong>"Twiddle" (Tap or untap target creature/permanent.)</strong></p>
 
